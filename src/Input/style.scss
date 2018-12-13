@@ -1,0 +1,43 @@
+.bpc-input {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  padding: 4px 11px;
+  width: 100%;
+  height: $md-size;
+  font-size: $font-size;
+  line-height: 1.499;
+  color: $text-color;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  transition: $transition;
+  outline: none;
+  border: 1px solid transparent;
+  border-color: rgba($color: $primary-color-2, $alpha: 0.4);
+
+  &:hover,
+  &:focus {
+    border-color: $primary-color-2;
+  }
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($color: $primary-color-1, $alpha: 0.2);
+  }
+  &::placeholder {
+    color: #c7c7c7;
+  }
+
+  &[bpc-size="large"] {
+    height: $lg-size;
+    padding: 6px 11px;
+    font-size: $font-size + 2px;
+  }
+
+  &[bpc-size="small"] {
+    height: $sm-size;
+    padding: 1px 7px;
+  }
+
+}

@@ -1,0 +1,123 @@
+.bpcr-select {
+  &-wrapper {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    padding: 4px 32px 4px 11px;
+    width: 100%;
+    height: $md-size;
+    font-size: $font-size;
+    line-height: 1.499;
+    color: $text-color;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    transition: $transition;
+    outline: none;
+    border: 1px solid transparent;
+    border-color: rgba($color: $primary-color-2, $alpha: 0.4);
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+      border-color: $primary-color-2;
+    }
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($color: $primary-color-1, $alpha: 0.2);
+    }
+  }
+
+  &-wrapper.show {
+    box-shadow: 0 0 0 2px rgba($color: $primary-color-1, $alpha: 0.2);
+  }
+
+  &-wrapper.show &-drop {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+    pointer-events: all;
+  }
+
+  &-wrapper.show &-value .iconfont {
+    transform: translate3d(0, -50%, 0) rotate(180deg);
+  }
+
+  &-wrapper[bpc-size="large"] {
+    height: $lg-size;
+    padding: 6px 32px 6px 11px;
+
+    .bpcr-select-value {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  &-wrapper[bpc-size="small"] {
+    height: $sm-size;
+    padding: 1px 32px 1px 7px;
+
+    .bpcr-select-value {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+
+  &-drop {
+    position: absolute;
+    left: -1px;
+    top: calc(100% + 8px);
+    width: 100%;
+    max-height: $unit * 20;
+    overflow: auto;
+    border: 1px solid $primary-color-2;
+    background-color: #fff;
+    z-index: 999;
+    background-image: linear-gradient(-45deg, $primary-color-1, $primary-color-2);
+    transition: $transition;
+    opacity: 0;
+    transform: scale3d(1, 0.7, 1);
+    transform-origin: center 0;
+    pointer-events: none;
+    box-shadow: $box-shadow-md;
+  }
+
+  &-option {
+    padding: 4px 11px;
+    transition: $transition;
+    background-color: #fff;
+
+    &:hover {
+      background-color: rgba($color: #fff, $alpha: 0.7);
+    }
+
+    &.selected {
+      font-weight: 500;
+      background-color: rgba($color: #fff, $alpha: 0.7);
+    }
+
+    &[disabled] {
+      color: rgba($color: $text-color, $alpha: 0.3);
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
+
+  &-value {
+    line-height: 22px;
+
+    .iconfont {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+      color: rgba($color: $text-color, $alpha: 0.3);
+      transition: $transition;
+    }
+  }
+}

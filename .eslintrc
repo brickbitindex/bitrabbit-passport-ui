@@ -1,0 +1,46 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "mocha": true,
+    "node": true,
+    "browser": true
+  },
+  "globals": {
+    "expect": true,
+    "sinon": true,
+    "__ENV__": false,
+    "__PLUGINS_PATH__": false,
+    "__VERSION__": false
+  },
+  "extends": "airbnb",
+  "plugins": [
+    "html"
+  ],
+  "rules": {
+    "import/no-unresolved": 0,
+    "no-new": 0,
+    "no-console": 0,
+    "no-underscore-dangle": 0,
+    "prefer-template": 0,
+    "max-len": 0,
+    "no-debugger": 2,
+    "import/extensions": 0,
+    "new-cap": 0,
+    "linebreak-style": 0,
+    "import/no-named-as-default": 0,
+    "class-methods-use-this": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "no-extend-native": 0,
+    "no-return-assign": 0,
+    "no-mixed-operators": 0,
+    "import/no-extraneous-dependencies": 0,
+    "react/require-render-return": 0
+  },
+  "ecmaFeatures": {
+    "experimentalObjectRestSpread": true
+  }
+}

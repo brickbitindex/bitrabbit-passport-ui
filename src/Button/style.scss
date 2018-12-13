@@ -1,0 +1,136 @@
+.bpc-btn {
+  position: relative;
+  line-height: 1.499;
+  height: $md-size;
+  color: $text-color;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  background-image: none;
+  border: none;
+  padding: 0 15px;
+  transition: $transition;
+  box-shadow: $box-shadow-sm;
+  background-color: #fff;
+  border-color: #d9d9d9;
+  font-size: $font-size;
+  outline: none;
+
+  &::after {
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-image: linear-gradient(-45deg, $primary-color-1, $primary-color-2);
+    border-image-slice: 1;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    transition: $transition;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    animation: $clickwave;
+  }
+
+  &[bpc-type="primary"] {
+    &::after {
+      display: none;
+    }
+
+    background-image: linear-gradient(-45deg, $primary-color-1, $primary-color-2);
+    background-size: 170%;
+    background-position: 0% 50%;
+    color: $text-color-inverted;
+
+    &:hover {
+      background-position: 100% 50%;
+    }
+  }
+
+  &[bpc-type="dotted"] {
+    &::before {
+      box-sizing: border-box;
+      border: 1px dotted #fff;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: $transition;
+      z-index: 10;
+    }
+  }
+
+  &[bpc-type="danger"] {
+    color: $primary-color-1;
+    background-color: #f5f5f5;
+
+    &:hover {
+      background-color: $primary-color-1;
+      color: $text-color-inverted;
+
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &[bpc-size="large"] {
+    height: $lg-size;
+    font-size: $font-size + 2px;
+  }
+
+  &[bpc-size="small"] {
+    height: $sm-size;
+  }
+
+  &[bpc-icon] {
+    padding: 0;
+    width: $md-size;
+    border-radius: 50%;
+
+    &::after {
+      border-image: none;
+      border-color: $primary-color-2;
+      border-radius: 50%;
+    }
+
+
+    &[bpc-type="dotted"] {
+      &::after {
+        border-style: dotted;
+      }
+      &::before {
+        display: none;
+      }
+    }
+
+    &[bpc-size="large"] {
+      width: $lg-size;
+
+      .iconfont {
+        font-size: 18px;
+      }
+    }
+  
+    &[bpc-size="small"] {
+      width: $sm-size;
+
+
+      .iconfont {
+        font-size: 14px;
+      }
+    }
+  }
+}

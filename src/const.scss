@@ -1,0 +1,65 @@
+// g
+$unit: 8px;
+
+$lg-size: 40px;
+$md-size: 32px;
+$sm-size: 24px;
+
+$primary-color-1: #fc466b;
+$primary-color-2: #1a9be3;
+
+$text-color: rgba(0, 0, 0, .65);
+$text-color-inverted: #fff;
+
+$font-size: 14px;
+
+$anime-ease: cubic-bezier(.645,.045,.355,1);
+$anime-duration: 0.3s;
+$transition: all $anime-duration $anime-ease;
+
+$box-shadow-sm: 0 2px 0 rgba(0,0,0,.03);
+$box-shadow-md: 0 2px 8px 1px rgba(0,0,0,0.1);
+
+$clickwave: clickwave 0.5s $anime-ease;
+
+// css
+
+html,
+body {
+  font-size: $font-size;
+  font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif,
+ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: $text-color;
+}
+
+.bpc-origin {
+  display: none;
+}
+
+a {
+  color: $primary-color-2;
+  text-decoration: none;
+  outline: none;
+  transition: $transition;
+
+  &:hover {
+    color: rgba($color: $primary-color-2, $alpha: 0.8);
+  }
+
+  &.bpc-highlight {
+    color: $primary-color-1;
+  }
+  &.bpc-highlight:hover {
+    color: rgba($color: $primary-color-1, $alpha: 0.8);
+  }
+}
+
+// anime
+@keyframes clickwave {
+  from {
+    box-shadow: 0 0 0 0px rgba($color: $primary-color-2, $alpha: 0.9);
+  }
+  to {
+    box-shadow: 0 0 0 3px rgba($color: $primary-color-2, $alpha: 0);
+  }
+}

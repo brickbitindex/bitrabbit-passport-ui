@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="http://localhost:9090/index.css">
+  <style>
+    .row {
+      margin-bottom: 24px;
+    }
+    .exp0 .iconfont {
+      font-size: 36px;
+    }
+
+    .exp1 input[type="text"],
+    .exp1 input[type="password"] {
+      width: 200px;
+    }
+    .exp2 {
+      width: 360px;
+    }
+    .exp2 button {
+      width: 100%;
+    }
+
+    .exp2,
+    .exp3 {
+      padding: 12px;
+      border: 1px solid #d6d6d6;
+    }
+
+    .exp3 {
+      width: 500px;
+    }
+    .exp3 button {
+      margin-right: 8px;
+    }
+
+    .exp4 .bpcr-select-wrapper {
+      width: 200px;
+    }
+
+    .exp5 {
+      width: 700px;
+    }
+    .exp5 table {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Icon</h1>
+  <div class="row exp0">
+    <i class="iconfont icon-check-circle"></i>
+    <i class="iconfont icon-CI"></i>
+    <a href="http://iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512&cid=9402">More</a>
+  </div>
+
+  <h1>Button</h1>
+  <div class="row">
+    <button class="bpc-btn" bpc-type="primary">Primary</button>
+    <button class="bpc-btn">Default</button>
+    <button class="bpc-btn" bpc-type="dotted">Dotted</button>
+    <button class="bpc-btn" bpc-type="danger">Danger</button>
+  </div>
+  <div class="row">
+    <button class="bpc-btn" bpc-size="large"><i class="iconfont icon-search"></i> Large</button>
+    <button class="bpc-btn"><i class="iconfont icon-search"></i> Normal</button>
+    <button class="bpc-btn" bpc-size="small">Small</button>
+  </div>
+  <div class="row">
+    <button class="bpc-btn" bpc-size="large" bpc-type="primary" bpc-icon><i class="iconfont icon-search"></i></button>
+    <button class="bpc-btn" bpc-size="large" bpc-icon><i class="iconfont icon-search"></i></button>
+    <button class="bpc-btn" bpc-size="large" bpc-type="dotted" bpc-icon><i class="iconfont icon-search"></i></button>
+    <button class="bpc-btn" bpc-size="large" bpc-type="danger" bpc-icon><i class="iconfont icon-search"></i></button>
+  </div>
+  <div class="row">
+    <button class="bpc-btn" bpc-type="primary" bpc-icon><i class="iconfont icon-search"></i></button>
+    <button class="bpc-btn" bpc-icon><i class="iconfont icon-search"></i></button>
+    <button class="bpc-btn" bpc-type="dotted" bpc-icon><i class="iconfont icon-search"></i></button>
+    <button class="bpc-btn" bpc-type="danger" bpc-icon><i class="iconfont icon-search"></i></button>
+  </div>
+  <div class="row">
+    <button class="bpc-btn" bpc-size="small" bpc-type="primary" bpc-icon><i class="iconfont icon-search"></i></button>
+    <button class="bpc-btn" bpc-size="small" bpc-icon><i class="iconfont icon-search"></i></button>
+    <button class="bpc-btn" bpc-size="small" bpc-type="dotted" bpc-icon><i class="iconfont icon-search"></i></button>
+    <button class="bpc-btn" bpc-size="small" bpc-type="danger" bpc-icon><i class="iconfont icon-search"></i></button>
+  </div>
+
+  <h1>Input</h1>
+  <div class="row exp1">
+    <input type="text" class="bpc-input" placeholder="Input">
+  </div>
+  <div class="row exp1">
+    <input type="text" class="bpc-input" placeholder="Large Size" bpc-size="large">
+    <input type="text" class="bpc-input" placeholder="Normal Size">
+    <input type="text" class="bpc-input" placeholder="Small Size" bpc-size="small">
+  </div>
+
+  <h1>Radio</h1>
+  <div class="row">
+    <span class="bpc-radio-group">
+      <input type="radio" name="g1" value="1" bpc-text="A" checked>
+      <input type="radio" name="g1" value="2" bpc-text="B">
+      <input type="radio" name="g1" value="3" bpc-text="C">
+    </span>
+  </div>
+
+  <h1>Checkbox</h1>
+  <div class="row">
+    <span class="bpc-checkbox-group">
+      <input type="checkbox" name="g2" value="1" bpc-text="A" checked>
+      <input type="checkbox" name="g2" value="2" bpc-text="B" checked>
+      <input type="checkbox" name="g2" value="3" bpc-text="C">
+    </span>
+  </div>
+
+  <h1>Switch</h1>
+  <div class="row">
+    <input class="bpc-switch" type="checkbox">
+    <input class="bpc-switch" type="checkbox" bpc-checked-text="开" bpc-unchecked-text="关" checked>
+  </div>
+  <div class="row">
+    <input class="bpc-switch" type="checkbox" bpc-checked-text="开" bpc-unchecked-text="关" bpc-size="large" checked>
+    <input class="bpc-switch" type="checkbox" bpc-checked-text="开" bpc-unchecked-text="关" checked>
+    <input class="bpc-switch" type="checkbox" bpc-checked-text="开" bpc-unchecked-text="关" bpc-size="small" checked>
+  </div>
+
+  <h1>Select</h1>
+  <div class="row exp4">
+    <select class="bpc-select">
+      <option value="1">A</option>
+      <option value="2" selected>B</option>
+      <option value="3" disabled>C</option>
+      <option value="4">D</option>
+    </select>
+  </div>
+  <div class="row exp4">
+    <select class="bpc-select" bpc-size="large">
+      <option value="1">A</option>
+      <option value="2" selected>B</option>
+      <option value="3" disabled>C</option>
+      <option value="4">D</option>
+    </select>
+    <select class="bpc-select" id="select1">
+      <option value="1">A</option>
+      <option value="2" selected>B</option>
+      <option value="3" disabled>C</option>
+      <option value="4">D</option>
+    </select>
+    <select class="bpc-select" bpc-size="small">
+      <option value="1">A</option>
+      <option value="2" selected>B</option>
+      <option value="3" disabled>C</option>
+      <option value="4">D</option>
+    </select>
+  </div>
+
+  <h1>Form</h1>
+  <div class="row exp2">
+    <ul class="bpc-form">
+      <li>
+        <input type="text" class="bpc-input" placeholder="Username">
+      </li>
+      <li>
+        <input type="password" class="bpc-input" placeholder="password">
+      </li>
+      <ul>
+        <li>
+          <span class="bpc-checkbox-group">
+            <input type="checkbox" name="g3" value="1" bpc-text="Remamber Me" checked>
+          </span>
+        </li>
+        <li>
+          <button class="bpc-btn" bpc-type="primary">Login</button>
+        </li>
+        <li>
+          <button class="bpc-btn">Cancel</button>
+        </li>
+      </ul>
+    </ul>
+  </div>
+  <div class="row exp3">
+    <ul class="bpc-form" bpc-has-label>
+      <li>
+        <span class="bpc-label" required>Country</span>
+        <select class="bpc-select">
+          <option value="1">China</option>
+          <option value="2">USA</option>
+          <option value="3">Japan</option>
+          <option value="4">France</option>
+        </select>
+      </li>
+      <li>
+        <span class="bpc-label" required>Username</span>
+        <input type="text" class="bpc-input">
+      </li>
+      <li>
+        <span class="bpc-label" required>Password</span>
+        <input type="password" class="bpc-input">
+      </li>
+      <ul>
+        <li>
+          <span class="bpc-checkbox-group">
+            <input type="checkbox" value="1" bpc-text="I agree the user policy">
+          </span>
+        </li>
+        <li>
+          <button class="bpc-btn" bpc-type="primary">Register</button>
+          <button class="bpc-btn">Cancel</button>
+        </li>
+      </ul>
+    </ul>
+  </div>
+
+  <h1>Table</h1>
+  <div class="row exp5">
+    <table class="bpc-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Content</th>
+          <th>Score</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alice</td>
+          <td>4</td>
+          <td><a href="#" class="bpc-highlight">@TechCrunch</a> Open Snapchat, point your camera...</td>
+          <td>87</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>5</td>
+          <td><a href="#" class="bpc-highlight">@Fight</a> take your monkey, see <a href="#" class="bpc-highlight">pic.twitter.com/Q8fa42...</a></td>
+          <td>90</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+        <tr>
+          <td>Oscar</td>
+          <td>6</td>
+          <td><a href="#" class="bpc-highlight">@Sitemap</a> help you to find your site's value...</td>
+          <td>75</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row exp5">
+    <table class="bpc-table" bpc-size="middle">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Content</th>
+          <th>Score</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alice</td>
+          <td>4</td>
+          <td><a href="#" class="bpc-highlight">@TechCrunch</a> Open Snapchat, point your camera...</td>
+          <td>87</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>5</td>
+          <td><a href="#" class="bpc-highlight">@Fight</a> take your monkey, see <a href="#" class="bpc-highlight">pic.twitter.com/Q8fa42...</a></td>
+          <td>90</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+        <tr>
+          <td>Oscar</td>
+          <td>6</td>
+          <td><a href="#" class="bpc-highlight">@Sitemap</a> help you to find your site's value...</td>
+          <td>75</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row exp5">
+    <table class="bpc-table" bpc-size="small">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Content</th>
+          <th>Score</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alice</td>
+          <td>4</td>
+          <td><a href="#" class="bpc-highlight">@TechCrunch</a> Open Snapchat, point your camera...</td>
+          <td>87</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>5</td>
+          <td><a href="#" class="bpc-highlight">@Fight</a> take your monkey, see <a href="#" class="bpc-highlight">pic.twitter.com/Q8fa42...</a></td>
+          <td>90</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+        <tr>
+          <td>Oscar</td>
+          <td>6</td>
+          <td><a href="#" class="bpc-highlight">@Sitemap</a> help you to find your site's value...</td>
+          <td>75</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="http://localhost:9090/index.js"></script>
+</body>
+</html>

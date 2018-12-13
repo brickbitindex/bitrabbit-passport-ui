@@ -1,0 +1,83 @@
+{
+  "name": "rabbitpay-js-sdk",
+  "version": "0.8.0",
+  "description": "Rabbitpay js sdk.",
+  "main": "lib",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clear": "rm -rf dist && rm -rf dist_dev",
+    "build": "rm -rf lib && babel src -d lib",
+    "watch": "rm -rf lib && babel src -d lib -w",
+    "build_test": "rm -rf test_dist && babel test -d test_dist",
+    "test": "npm run build && npm run build_test && cp -r test/data test_dist/data && mocha test_dist/index.js --slow 5000 --timeout 10000",
+    "deploy": "npm run clear && NODE_ENV=production webpack -p --display-error-details --config webpack/webpack.deploy.config.js --profile --json > webpack-stats.json && scp -r dist/* deploy@35.194.159.171:~/g/rabbitpay-js-sdk/",
+    "dev": "npm run clear && webpack -p --display-error-details --config webpack/webpack.dev.config.js -w",
+    "dev_html": "http-server . -p 8080",
+    "server": "http-server ./dist_dev -p 9090"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:brickworks/bitrabbit/forum-jsbridge.git"
+  },
+  "keywords": [
+    "forum",
+    "plugin"
+  ],
+  "bugs": {
+    "url": "https://gitlab.com/brickworks/bitrabbit/forum-jsbridge/issues"
+  },
+  "homepage": "https://gitlab.com/brickworks/bitrabbit/forum-jsbridge#readme",
+  "author": "sekaiamber",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.0.1",
+    "babel-cli": "^6.6.0",
+    "babel-core": "^6.6.0",
+    "babel-eslint": "^7.0.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-runtime": "^6.26.0",
+    "chai": "^4.0.0",
+    "css-loader": "^1.0.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb": "12.0.0",
+    "eslint-loader": "^1.5.0",
+    "eslint-plugin-html": "^1.7.0",
+    "eslint-plugin-import": "1.16.0",
+    "eslint-plugin-jsx-a11y": "2.2.2",
+    "eslint-plugin-react": "6.8.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.12.0",
+    "jsdom": "^11.11.0",
+    "json-loader": "^0.5.7",
+    "mocha": "^2.2.5",
+    "node-sass": "^4.9.2",
+    "on-build-webpack": "^0.1.0",
+    "postcss-loader": "^2.1.6",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "to-string-loader": "^1.1.5",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-node-externals": "^1.5.4",
+    "webpack-shell-plugin": "^0.5.0"
+  },
+  "dependencies": {
+    "autobind-decorator": "^2.1.0",
+    "qs": "^6.6.0"
+  }
+}

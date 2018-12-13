@@ -1,0 +1,53 @@
+.bpc-form {
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    position: relative;
+    padding: 0;
+    list-style: none;
+  }
+
+  &>li {
+    margin-bottom: $unit * 3;
+  }
+  
+  &>ul>li {
+    margin-bottom: $unit * 1;
+  }
+
+  &[bpc-has-label] li {
+    padding-left: 35%;
+
+    .bpc-label {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 35%;
+      text-align: right;
+      transform: translate3d(0, -50%, 0);
+      padding-right: $unit;
+      white-space: nowrap;
+      box-sizing: border-box;
+
+      &::after {
+        content: ':';
+        margin-left: 2px;
+      }
+
+      &[required]::before {
+        content: '*';
+        margin-right: 4px;
+        font-family: SimSun;
+        color: $primary-color-1;
+      }
+    }
+  }
+}
