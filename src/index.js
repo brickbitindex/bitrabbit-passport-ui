@@ -3,6 +3,7 @@ import './Radio';
 import './Checkbox';
 import './Switch';
 import './Select';
+import './Pagination';
 
 import './style.scss';
 

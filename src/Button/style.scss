@@ -93,6 +93,7 @@
 
   &[bpc-size="small"] {
     height: $sm-size;
+    font-size: 12px;
   }
 
   &[bpc-icon] {
@@ -120,16 +121,50 @@
       width: $lg-size;
 
       .iconfont {
-        font-size: 18px;
+        font-size: 16px;
       }
     }
   
     &[bpc-size="small"] {
       width: $sm-size;
 
-
       .iconfont {
-        font-size: 14px;
+        font-size: 12px;
+      }
+    }
+
+    .iconfont {
+      font-size: 14px;
+    }
+  }
+
+  &[disabled] {
+    color: rgba(0,0,0,.25);
+    background: none;
+    background-color: #f5f5f5;
+    border: 1px solid #d9d9d9;
+    text-shadow: none;
+    box-shadow: none;
+    cursor: not-allowed;
+
+    &::after {
+      display: none;
+    }
+
+    &[bpc-type="dotted"] {
+      border-style: dotted;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &[bpc-type="danger"] {
+      color: rgba($color: $primary-color-1, $alpha: 0.4);
+
+      &:hover {
+        background-color: #f5f5f5;
+        color: rgba($color: $primary-color-1, $alpha: 0.4);
       }
     }
   }

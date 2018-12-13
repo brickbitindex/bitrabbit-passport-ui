@@ -1,0 +1,26 @@
+.bpc-pagination {
+  text-align: right;
+  margin: $unit * 1.5 0;
+
+  &-wrapper {
+    &>* {
+      margin-left: $unit;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &-current {
+    background-color: $primary-color-2;
+    color: #fff;
+  }
+
+  &[bpc-size="large"] {
+    margin: $unit * 2 0;
+  }
+  &[bpc-size="small"] {
+    margin: $unit 0;
+  }
+}

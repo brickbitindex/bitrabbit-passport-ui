@@ -42,7 +42,8 @@
       width: 200px;
     }
 
-    .exp5 {
+    .exp5,
+    .exp6 {
       width: 700px;
     }
     .exp5 table {
@@ -87,6 +88,18 @@
     <button class="bpc-btn" bpc-size="small" bpc-icon><i class="iconfont icon-search"></i></button>
     <button class="bpc-btn" bpc-size="small" bpc-type="dotted" bpc-icon><i class="iconfont icon-search"></i></button>
     <button class="bpc-btn" bpc-size="small" bpc-type="danger" bpc-icon><i class="iconfont icon-search"></i></button>
+  </div>
+  <div class="row">
+    <button class="bpc-btn" disabled bpc-type="primary">Primary</button>
+    <button class="bpc-btn" disabled>Default</button>
+    <button class="bpc-btn" disabled bpc-type="dotted">Dotted</button>
+    <button class="bpc-btn" disabled bpc-type="danger">Danger</button>
+  </div>
+  <div class="row">
+    <button class="bpc-btn" disabled bpc-type="primary" bpc-icon><i class="iconfont icon-search"></i></button>
+    <button class="bpc-btn" disabled bpc-icon><i class="iconfont icon-search"></i></button>
+    <button class="bpc-btn" disabled bpc-type="dotted" bpc-icon><i class="iconfont icon-search"></i></button>
+    <button class="bpc-btn" disabled bpc-type="danger" bpc-icon><i class="iconfont icon-search"></i></button>
   </div>
 
   <h1>Input</h1>
@@ -213,6 +226,20 @@
         </li>
       </ul>
     </ul>
+  </div>
+
+  <h1>Pagination</h1>
+  <div class="row exp6">
+    <div class="bpc-pagination" bpc-total-page="3" bpc-current-page="1" bpc-url-template="/?p={index}" bpc-target="_blank"></div>
+  </div>
+  <div class="row exp6">
+    <div class="bpc-pagination" bpc-total-page="20" bpc-current-page="1" bpc-url-template="/?p={index}" bpc-size="large"></div>
+  </div>
+  <div class="row exp6">
+    <div class="bpc-pagination" bpc-total-page="20" bpc-current-page="16" bpc-url-template="/?p={index}"></div>
+  </div>
+  <div class="row exp6">
+    <div class="bpc-pagination" bpc-total-page="20" bpc-current-page="20" bpc-url-template="/?p={index}" bpc-size="small"></div>
   </div>
 
   <h1>Table</h1>
