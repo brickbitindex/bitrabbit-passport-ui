@@ -10,7 +10,7 @@ var version = require('../package.json').version;
 var config = {
   context: path.join(__dirname, '..', '/'),
   entry: {
-    [version + '/rabbitpay-js-sdk']: './src/index',
+    [version + '/bpc']: './src/index',
   },
   output: {
     path: path.join(__dirname, '..', '/dist'),
@@ -34,6 +34,7 @@ var config = {
       moveToParents: true
     }),
     new webpack.optimize.DedupePlugin(),
+    new ExtractTextPlugin("[name].min.css")
   ],
   module: {
     loaders: [
@@ -44,11 +45,11 @@ var config = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css!postcss'
+        loader: ExtractTextPlugin.extract('css!postcss')
       },
       {
         test: /\.scss$/,
-        loader: 'to-string!css!postcss!sass'
+        loader: ExtractTextPlugin.extract('css!postcss!sass')
       },
       {
         test: /\.(jpe?g|png|gif)$/i,
