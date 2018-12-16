@@ -1,5 +1,6 @@
 class BPCcls {
   _components = [];
+  ready = false;
 
   addComponent(Component) {
     this._components.push(Component);
@@ -28,6 +29,21 @@ class BPCcls {
           this._renderTarget($dom, Component);
         });
       }
+    }
+  }
+
+  init() {
+    const firstRender = () => {
+      if (this.ready) return;
+      this.ready = true;
+      this.render();
+    };
+
+    if (document.readyState === 'complete' || (document.readyState !== 'loading' && !document.documentElement.doScroll)) {
+      window.setTimeout(firstRender);
+    } else {
+      document.addEventListener('DOMContentLoaded', firstRender);
+      window.addEventListener('load', firstRender);
     }
   }
 }

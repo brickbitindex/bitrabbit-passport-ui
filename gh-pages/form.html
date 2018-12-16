@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BitRabbit Passport UI</title>
+  <link rel="stylesheet" href="http://assets.zjzsxhy.com/g/bpc/0.2.0/bpc.min.css">
+  <script src="http://assets.zjzsxhy.com/g/bpc/0.2.0/bpc.min.js"></script>
+  <style>
+    pre {
+      background-color: #f5f5f5;
+      border: 1px solid #d9d9d9;
+      padding: 12px;
+      line-height: 1.5;
+    }
+    .exp2 {
+      width: 360px;
+    }
+    .exp2 button {
+      width: 100%;
+    }
+    .exp3 {
+      width: 500px;
+    }
+    .exp3 button {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Form - BitRabbit Passport UI</h1>
+  <p>表单是最常用的模式，Form的实践在设计时考虑了绝大部分需求的情况，我们不认为实践需要满足所有需求。在Form的模式里，整个Form需要呈现出List的特质，所以选择了ul元素，内部每个li元素为一个表单项。</p>
+  <ul>
+    <li>普通元素</li>
+    <li>无需JS</li>
+    <li>锚定class: ul.bpc-form</li>
+  </ul>
+  <h2>简单表单</h2>
+  <div class="row exp2">
+<ul class="bpc-form">
+  <li>
+    <input type="text" class="bpc-input" placeholder="Username">
+  </li>
+  <li>
+    <input type="password" class="bpc-input" placeholder="password">
+  </li>
+  <ul>
+    <li>
+      <span class="bpc-checkbox-group">
+        <input type="checkbox" name="g3" value="1" bpc-text="Remamber Me" checked>
+      </span>
+    </li>
+    <li>
+      <button class="bpc-btn" bpc-type="primary">Login</button>
+    </li>
+    <li>
+      <button class="bpc-btn">Cancel</button>
+    </li>
+  </ul>
+</ul>
+  </div>
+  <pre><code>&#x3C;ul class=&#x22;bpc-form&#x22;&#x3E;
+  &#x3C;li&#x3E;
+    &#x3C;input type=&#x22;text&#x22; class=&#x22;bpc-input&#x22; placeholder=&#x22;Username&#x22;&#x3E;
+  &#x3C;/li&#x3E;
+  &#x3C;li&#x3E;
+    &#x3C;input type=&#x22;password&#x22; class=&#x22;bpc-input&#x22; placeholder=&#x22;password&#x22;&#x3E;
+  &#x3C;/li&#x3E;
+  &#x3C;ul&#x3E;
+    &#x3C;li&#x3E;
+      &#x3C;span class=&#x22;bpc-checkbox-group&#x22;&#x3E;
+        &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;g3&#x22; value=&#x22;1&#x22; bpc-text=&#x22;Remamber Me&#x22; checked&#x3E;
+      &#x3C;/span&#x3E;
+    &#x3C;/li&#x3E;
+    &#x3C;li&#x3E;
+      &#x3C;button class=&#x22;bpc-btn&#x22; bpc-type=&#x22;primary&#x22;&#x3E;Login&#x3C;/button&#x3E;
+    &#x3C;/li&#x3E;
+    &#x3C;li&#x3E;
+      &#x3C;button class=&#x22;bpc-btn&#x22;&#x3E;Cancel&#x3C;/button&#x3E;
+    &#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+&#x3C;/ul&#x3E;</code></pre>
+  <pre><code>.exp2 {
+  width: 360px;
+}
+.exp2 button {
+  width: 100%;
+}</code></pre>
+  <p>在Form中再次添加ul将给予二级表单的呈现，它的间距将较一级表单更加小一点。</p>
+
+  <h2>带标签的表单</h2>
+  <div class="row exp3">
+    <ul class="bpc-form" bpc-has-label>
+      <li>
+        <span class="bpc-label" required>Country</span>
+        <select class="bpc-select">
+          <option value="1">China</option>
+          <option value="2">USA</option>
+          <option value="3">Japan</option>
+          <option value="4">France</option>
+        </select>
+      </li>
+      <li>
+        <span class="bpc-label" required>Username</span>
+        <input type="text" class="bpc-input">
+      </li>
+      <li>
+        <span class="bpc-label" required>Password</span>
+        <input type="password" class="bpc-input">
+      </li>
+      <ul>
+        <li>
+          <span class="bpc-checkbox-group">
+            <input type="checkbox" value="1" bpc-text="I agree the user policy">
+          </span>
+        </li>
+        <li>
+          <button class="bpc-btn" bpc-type="primary">Register</button>
+          <button class="bpc-btn">Cancel</button>
+        </li>
+      </ul>
+    </ul>
+  </div>
+  <pre><code>&#x3C;ul class=&#x22;bpc-form&#x22; bpc-has-label&#x3E;
+  &#x3C;li&#x3E;
+    &#x3C;span class=&#x22;bpc-label&#x22; required&#x3E;Country&#x3C;/span&#x3E;
+    &#x3C;select class=&#x22;bpc-select&#x22;&#x3E;
+      &#x3C;option value=&#x22;1&#x22;&#x3E;China&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;2&#x22;&#x3E;USA&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;3&#x22;&#x3E;Japan&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;4&#x22;&#x3E;France&#x3C;/option&#x3E;
+    &#x3C;/select&#x3E;
+  &#x3C;/li&#x3E;
+  &#x3C;li&#x3E;
+    &#x3C;span class=&#x22;bpc-label&#x22; required&#x3E;Username&#x3C;/span&#x3E;
+    &#x3C;input type=&#x22;text&#x22; class=&#x22;bpc-input&#x22;&#x3E;
+  &#x3C;/li&#x3E;
+  &#x3C;li&#x3E;
+    &#x3C;span class=&#x22;bpc-label&#x22; required&#x3E;Password&#x3C;/span&#x3E;
+    &#x3C;input type=&#x22;password&#x22; class=&#x22;bpc-input&#x22;&#x3E;
+  &#x3C;/li&#x3E;
+  &#x3C;ul&#x3E;
+    &#x3C;li&#x3E;
+      &#x3C;span class=&#x22;bpc-checkbox-group&#x22;&#x3E;
+        &#x3C;input type=&#x22;checkbox&#x22; value=&#x22;1&#x22; bpc-text=&#x22;I agree the user policy&#x22;&#x3E;
+      &#x3C;/span&#x3E;
+    &#x3C;/li&#x3E;
+    &#x3C;li&#x3E;
+      &#x3C;button class=&#x22;bpc-btn&#x22; bpc-type=&#x22;primary&#x22;&#x3E;Register&#x3C;/button&#x3E;
+      &#x3C;button class=&#x22;bpc-btn&#x22;&#x3E;Cancel&#x3C;/button&#x3E;
+    &#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+&#x3C;/ul&#x3E;</code></pre>
+  <pre><code>.exp3 {
+  width: 500px;
+}
+.exp3 button {
+  margin-right: 8px;
+}</code></pre>
+  <p>使用bpc-has-label属性可以要求Form带标签，标签的class为bpc-label，拥有一个required的属性，来表示必要的表单项。</p>
+</body>
+</html>

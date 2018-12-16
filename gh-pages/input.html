@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BitRabbit Passport UI</title>
+  <link rel="stylesheet" href="http://assets.zjzsxhy.com/g/bpc/0.2.0/bpc.min.css">
+  <script src="http://assets.zjzsxhy.com/g/bpc/0.2.0/bpc.min.js"></script>
+  <style>
+    pre {
+      background-color: #f5f5f5;
+      border: 1px solid #d9d9d9;
+      padding: 12px;
+      line-height: 1.5;
+    }
+    .bpc-input {
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Input - BitRabbit Passport UI</h1>
+  <p>输入框是最基础的组件</p>
+  <ul>
+    <li>普通元素</li>
+    <li>无需JS</li>
+    <li>锚定class: bpc-input</li>
+  </ul>
+  <h2>尺寸：配置项bpc-size</h2>
+  <div class="row">
+    <input type="text" class="bpc-input" placeholder="Large Size" bpc-size="large">
+    <input type="text" class="bpc-input" placeholder="Normal Size">
+    <input type="text" class="bpc-input" placeholder="Small Size" bpc-size="small">
+  </div>
+  <pre><code>&#x3C;input type=&#x22;text&#x22; class=&#x22;bpc-input&#x22; placeholder=&#x22;Large Size&#x22; bpc-size=&#x22;large&#x22;&#x3E;
+&#x3C;input type=&#x22;text&#x22; class=&#x22;bpc-input&#x22; placeholder=&#x22;Normal Size&#x22;&#x3E;
+&#x3C;input type=&#x22;text&#x22; class=&#x22;bpc-input&#x22; placeholder=&#x22;Small Size&#x22; bpc-size=&#x22;small&#x22;&#x3E;</code></pre>
+  
+  <h2>配置</h2>
+  <div>
+    <table class="bpc-table">
+      <thead>
+        <tr>
+          <td>配置项</td>
+          <td>原生</td>
+          <td>描述</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>bpc-size</td>
+          <td>N</td>
+          <td>尺寸大小，取值空, large, small</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

@@ -7,4 +7,4 @@ import './Pagination';
 
 import './style.scss';
 
-BPC.render();
+BPC.init();

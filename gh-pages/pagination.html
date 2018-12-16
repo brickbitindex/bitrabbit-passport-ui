@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BitRabbit Passport UI</title>
+  <link rel="stylesheet" href="http://assets.zjzsxhy.com/g/bpc/0.2.0/bpc.min.css">
+  <script src="http://assets.zjzsxhy.com/g/bpc/0.2.0/bpc.min.js"></script>
+  <style>
+    pre {
+      background-color: #f5f5f5;
+      border: 1px solid #d9d9d9;
+      padding: 12px;
+      line-height: 1.5;
+    }
+    .exp6 {
+      width: 700px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pagination - BitRabbit Passport UI</h1>
+  <p>分页器是数据呈现部分最常用的组件之一。在分页器的设计里，我们完全使用JS来生成DOM，因为我们不认为在ServerSide Render里让后端模板来拼接分页器的所有逻辑是不明智的。</p>
+  <ul>
+    <li>脚本元素</li>
+    <li>需要JS</li>
+    <li>锚定class: bpc-pagination</li>
+  </ul>
+  <h2>简单使用</h2>
+  <div class="row exp6">
+    <div class="bpc-pagination" bpc-total-page="20" bpc-current-page="16" bpc-url-template="/?p={index}"></div>
+  </div>
+  <pre><code>&#x3C;div class=&#x22;bpc-pagination&#x22; bpc-total-page=&#x22;20&#x22; bpc-current-page=&#x22;16&#x22; bpc-url-template=&#x22;/?p={index}&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+  <h2>尺寸：配置项bpc-size</h2>
+  <div class="row exp6">
+    <div class="bpc-pagination" bpc-total-page="20" bpc-current-page="1" bpc-url-template="/?p={index}" bpc-size="large"></div>
+    <div class="bpc-pagination" bpc-total-page="20" bpc-current-page="16" bpc-url-template="/?p={index}"></div>
+    <div class="bpc-pagination" bpc-total-page="20" bpc-current-page="20" bpc-url-template="/?p={index}" bpc-size="small"></div>
+  </div>
+  <pre><code>&#x3C;div class=&#x22;bpc-pagination&#x22; bpc-total-page=&#x22;20&#x22; bpc-current-page=&#x22;1&#x22; bpc-url-template=&#x22;/?p={index}&#x22; bpc-size=&#x22;large&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bpc-pagination&#x22; bpc-total-page=&#x22;20&#x22; bpc-current-page=&#x22;16&#x22; bpc-url-template=&#x22;/?p={index}&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bpc-pagination&#x22; bpc-total-page=&#x22;20&#x22; bpc-current-page=&#x22;20&#x22; bpc-url-template=&#x22;/?p={index}&#x22; bpc-size=&#x22;small&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+
+  <h2>配置</h2>
+  <div>
+    <table class="bpc-table">
+      <thead>
+        <tr>
+          <td>配置项</td>
+          <td>原生</td>
+          <td>描述</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>bpc-size</td>
+          <td>N</td>
+          <td>尺寸大小，取值空, large, small</td>
+        </tr>
+        <tr>
+          <td>bpc-total-page</td>
+          <td>N</td>
+          <td>总共几页</td>
+        </tr>
+        <tr>
+          <td>bpc-current-page</td>
+          <td>N</td>
+          <td>当前第几页</td>
+        </tr>
+        <tr>
+          <td>bpc-url-template</td>
+          <td>N</td>
+          <td>点击各链接的url模板，使用{index}来代表页码</td>
+        </tr>
+        <tr>
+          <td>bpc-target</td>
+          <td>N</td>
+          <td>链接的a元素的target属性，若在新页面打开，则此项为_blank</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BitRabbit Passport UI</title>
+  <link rel="stylesheet" href="http://assets.zjzsxhy.com/g/bpc/0.2.0/bpc.min.css">
+  <script src="http://assets.zjzsxhy.com/g/bpc/0.2.0/bpc.min.js"></script>
+  <style>
+    pre {
+      background-color: #f5f5f5;
+      border: 1px solid #d9d9d9;
+      padding: 12px;
+      line-height: 1.5;
+    }
+    .row {
+      margin-bottom: 24px;
+    }
+    .exp5 {
+      width: 700px;
+    }
+    .exp5 table {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Table - BitRabbit Passport UI</h1>
+  <p>表格是数据呈现的最直观常用的组件。</p>
+  <ul>
+    <li>普通元素</li>
+    <li>无需JS</li>
+    <li>锚定class: bpc-table</li>
+  </ul>
+  <h2>基本使用</h2>
+  <div class="row exp5">
+    <table class="bpc-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Content</th>
+          <th>Score</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alice</td>
+          <td>4</td>
+          <td><a href="#" class="bpc-highlight">@TechCrunch</a> Open Snapchat, point your camera...</td>
+          <td>87</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>5</td>
+          <td><a href="#" class="bpc-highlight">@Fight</a> take your monkey, see <a href="#" class="bpc-highlight">pic.twitter.com/Q8fa42...</a></td>
+          <td>90</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+        <tr>
+          <td>Oscar</td>
+          <td>6</td>
+          <td><a href="#" class="bpc-highlight">@Sitemap</a> help you to find your site's value...</td>
+          <td>75</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <pre><code>&#x3C;table class=&#x22;bpc-table&#x22;&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;th&#x3E;Name&#x3C;/th&#x3E;
+      &#x3C;th&#x3E;Class&#x3C;/th&#x3E;
+      &#x3C;th&#x3E;Content&#x3C;/th&#x3E;
+      &#x3C;th&#x3E;Score&#x3C;/th&#x3E;
+      &#x3C;th&#x3E;Options&#x3C;/th&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;Alice&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;4&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;&#x3C;a href=&#x22;#&#x22; class=&#x22;bpc-highlight&#x22;&#x3E;@TechCrunch&#x3C;/a&#x3E; Open Snapchat, point your camera...&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;87&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Detail&#x3C;/a&#x3E;&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;Bob&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;5&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;&#x3C;a href=&#x22;#&#x22; class=&#x22;bpc-highlight&#x22;&#x3E;@Fight&#x3C;/a&#x3E; take your monkey, see &#x3C;a href=&#x22;#&#x22; class=&#x22;bpc-highlight&#x22;&#x3E;pic.twitter.com/Q8fa42...&#x3C;/a&#x3E;&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;90&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Detail&#x3C;/a&#x3E;&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;Oscar&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;6&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;&#x3C;a href=&#x22;#&#x22; class=&#x22;bpc-highlight&#x22;&#x3E;@Sitemap&#x3C;/a&#x3E; help you to find your site&#x27;s value...&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;75&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Detail&#x3C;/a&#x3E;&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</code></pre>
+
+  <h2>尺寸：配置项pbc-size</h2>
+  <h3>bpc-size="middle"</h3>
+  <div class="row exp5">
+    <table class="bpc-table" bpc-size="middle">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Content</th>
+          <th>Score</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alice</td>
+          <td>4</td>
+          <td><a href="#" class="bpc-highlight">@TechCrunch</a> Open Snapchat, point your camera...</td>
+          <td>87</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>5</td>
+          <td><a href="#" class="bpc-highlight">@Fight</a> take your monkey, see <a href="#" class="bpc-highlight">pic.twitter.com/Q8fa42...</a></td>
+          <td>90</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+        <tr>
+          <td>Oscar</td>
+          <td>6</td>
+          <td><a href="#" class="bpc-highlight">@Sitemap</a> help you to find your site's value...</td>
+          <td>75</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>bpc-size="small"</h3>
+  <div class="row exp5">
+    <table class="bpc-table" bpc-size="small">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Content</th>
+          <th>Score</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alice</td>
+          <td>4</td>
+          <td><a href="#" class="bpc-highlight">@TechCrunch</a> Open Snapchat, point your camera...</td>
+          <td>87</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>5</td>
+          <td><a href="#" class="bpc-highlight">@Fight</a> take your monkey, see <a href="#" class="bpc-highlight">pic.twitter.com/Q8fa42...</a></td>
+          <td>90</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+        <tr>
+          <td>Oscar</td>
+          <td>6</td>
+          <td><a href="#" class="bpc-highlight">@Sitemap</a> help you to find your site's value...</td>
+          <td>75</td>
+          <td><a href="#">Detail</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>配置</h2>
+  <div>
+    <table class="bpc-table">
+      <thead>
+        <tr>
+          <td>配置项</td>
+          <td>原生</td>
+          <td>描述</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>bpc-size</td>
+          <td>N</td>
+          <td>尺寸大小，取值空, middle, small</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 {
   "name": "bitrabbit-passport-ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "BitRabbit Passport UI.",
   "main": "lib",
   "files": [
@@ -12,7 +12,7 @@
     "watch": "rm -rf lib && babel src -d lib -w",
     "build_test": "rm -rf test_dist && babel test -d test_dist",
     "test": "npm run build && npm run build_test && cp -r test/data test_dist/data && mocha test_dist/index.js --slow 5000 --timeout 10000",
-    "deploy": "npm run clear && NODE_ENV=production webpack -p --display-error-details --config webpack/webpack.deploy.config.js --profile --json > webpack-stats.json && scp -r dist/* deploy@35.194.159.171:~/g/bpc/",
+    "deploy": "npm run clear && NODE_ENV=production webpack -p --display-error-details --config webpack/webpack.deploy.config.js --profile --json > webpack-stats.json && scp -r dist/* deploy@39.98.92.83:~/public/g/bpc/",
     "dev": "npm run clear && webpack -p --display-error-details --config webpack/webpack.dev.config.js -w",
     "dev_html": "http-server . -p 8080",
     "server": "http-server ./dist_dev -p 9090"

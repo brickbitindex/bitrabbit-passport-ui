@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BitRabbit Passport UI</title>
+  <link rel="stylesheet" href="http://assets.zjzsxhy.com/g/bpc/0.2.0/bpc.min.css">
+  <script src="http://assets.zjzsxhy.com/g/bpc/0.2.0/bpc.min.js"></script>
+  <style>
+    pre {
+      background-color: #f5f5f5;
+      border: 1px solid #d9d9d9;
+      padding: 12px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Button - BitRabbit Passport UI</h1>
+  <p>按钮是最基本的元素</p>
+  <ul>
+    <li>普通元素</li>
+    <li>无需JS</li>
+    <li>锚定class: bpc-btn</li>
+  </ul>
+  <h2>基本使用：配置项bpc-type</h2>
+  <div class="row">
+    <button class="bpc-btn" bpc-type="primary">Primary</button>
+    <button class="bpc-btn">Default</button>
+    <button class="bpc-btn" bpc-type="dotted">Dotted</button>
+    <button class="bpc-btn" bpc-type="danger">Danger</button>
+  </div>
+  <pre><code>&#x3C;button class=&#x22;bpc-btn&#x22; bpc-type=&#x22;primary&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22;&#x3E;Default&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22; bpc-type=&#x22;dotted&#x22;&#x3E;Dotted&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22; bpc-type=&#x22;danger&#x22;&#x3E;Danger&#x3C;/button&#x3E;</code></pre>
+  <h2>尺寸：配置项bpc-size</h2>
+  <div class="row">
+    <button class="bpc-btn" bpc-size="large">Large</button>
+    <button class="bpc-btn">Normal</button>
+    <button class="bpc-btn" bpc-size="small">Small</button>
+  </div>
+  <pre><code>&#x3C;button class=&#x22;bpc-btn&#x22; bpc-size=&#x22;large&#x22;&#x3E;Large&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22;&#x3E;Normal&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22; bpc-size=&#x22;small&#x22;&#x3E;Small&#x3C;/button&#x3E;</code></pre>
+  <h2>图标按钮：配置项bpc-icon</h2>
+  <div class="row">
+    <button class="bpc-btn" bpc-type="primary" bpc-icon><i class="iconfont icon-search"></i></button>
+    <button class="bpc-btn" bpc-icon><i class="iconfont icon-search"></i></button>
+    <button class="bpc-btn" bpc-type="dotted" bpc-icon><i class="iconfont icon-search"></i></button>
+    <button class="bpc-btn" bpc-type="danger" bpc-icon><i class="iconfont icon-search"></i></button>
+  </div>
+  <pre><code>&#x3C;button class=&#x22;bpc-btn&#x22; bpc-type=&#x22;primary&#x22; bpc-icon&#x3E;&#x3C;i class=&#x22;iconfont icon-search&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22; bpc-icon&#x3E;&#x3C;i class=&#x22;iconfont icon-search&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22; bpc-type=&#x22;dotted&#x22; bpc-icon&#x3E;&#x3C;i class=&#x22;iconfont icon-search&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22; bpc-type=&#x22;danger&#x22; bpc-icon&#x3E;&#x3C;i class=&#x22;iconfont icon-search&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/button&#x3E;</code></pre>
+  <h2>禁止状态：原生配置项disabled</h2>
+  <div class="row">
+<button class="bpc-btn" disabled bpc-type="primary">Primary</button>
+<button class="bpc-btn" disabled>Default</button>
+<button class="bpc-btn" disabled bpc-type="dotted">Dotted</button>
+<button class="bpc-btn" disabled bpc-type="danger">Danger</button>
+<button class="bpc-btn" disabled bpc-type="primary" bpc-icon><i class="iconfont icon-search"></i></button>
+<button class="bpc-btn" disabled bpc-icon><i class="iconfont icon-search"></i></button>
+<button class="bpc-btn" disabled bpc-type="dotted" bpc-icon><i class="iconfont icon-search"></i></button>
+<button class="bpc-btn" disabled bpc-type="danger" bpc-icon><i class="iconfont icon-search"></i></button>
+  </div>
+  <pre><code>&#x3C;button class=&#x22;bpc-btn&#x22; disabled bpc-type=&#x22;primary&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22; disabled&#x3E;Default&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22; disabled bpc-type=&#x22;dotted&#x22;&#x3E;Dotted&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22; disabled bpc-type=&#x22;danger&#x22;&#x3E;Danger&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22; disabled bpc-type=&#x22;primary&#x22; bpc-icon&#x3E;&#x3C;i class=&#x22;iconfont icon-search&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22; disabled bpc-icon&#x3E;&#x3C;i class=&#x22;iconfont icon-search&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22; disabled bpc-type=&#x22;dotted&#x22; bpc-icon&#x3E;&#x3C;i class=&#x22;iconfont icon-search&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22; disabled bpc-type=&#x22;danger&#x22; bpc-icon&#x3E;&#x3C;i class=&#x22;iconfont icon-search&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/button&#x3E;</code></pre>
+
+  <h2>配置</h2>
+  <div>
+    <table class="bpc-table">
+      <thead>
+        <tr>
+          <td>配置项</td>
+          <td>原生</td>
+          <td>描述</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>disabled</td>
+          <td>Y</td>
+          <td>是否禁止按钮</td>
+        </tr>
+        <tr>
+          <td>bpc-type</td>
+          <td>N</td>
+          <td>类型，取值空, primary, dotted, danger</td>
+        </tr>
+        <tr>
+          <td>bpc-size</td>
+          <td>N</td>
+          <td>尺寸大小，取值空, large, small</td>
+        </tr>
+        <tr>
+          <td>bpc-icon</td>
+          <td>N</td>
+          <td>是否为图标按钮</td>
+        </tr>
+        <tr>
+          <td>bpc-icon</td>
+          <td>N</td>
+          <td>是否为图标按钮</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

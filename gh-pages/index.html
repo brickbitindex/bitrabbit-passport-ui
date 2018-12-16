@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BitRabbit Passport UI</title>
+  <link rel="stylesheet" href="http://assets.zjzsxhy.com/g/bpc/0.2.0/bpc.min.css">
+  <script src="http://assets.zjzsxhy.com/g/bpc/0.2.0/bpc.min.js"></script>
+  <style>
+    pre {
+      background-color: #f5f5f5;
+      border: 1px solid #d9d9d9;
+      padding: 12px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>BitRabbit Passport UI</h1>
+  <p>BitRabbit Passport规定了2种主题色：</p>
+  <ul>
+    <li>主题色1：<span style="background-color: #fc466b; color: #fff">#fc466b</span></li>
+    <li>主题色2：<span style="background-color: #1a9be3; color: #fff">#1a9be3</span></li>
+  </ul>
+  <p>整个UI在设计之初考虑的就是使用2种主题色来进行互相的协调。在设计之初我们遵循3个原则：</p>
+  <ul>
+    <li>明确：页面元素的呈现、转化、反馈必须明确表达目的。</li>
+    <li>深刻：页面元素的呈现、转化、反馈可以教育用户，使得用户能迅速适应页面。</li>
+    <li>克制：页面元素在设计上必须减少表达，力求以最有效、简洁的方式进行呈现、转化、反馈。</li>
+  </ul>
+  <p>对于接入方式的选择，我们做了很多设计，我们认为，好的情况应该如下：</p>
+  <ul>
+    <li>我们不愿意大量使用class，复杂定制会使得classList过长，难以辨认，所以对于组件，我们更倾向于使用class来定位元素，并使用属性来进行配置。</li>
+    <li>我们觉得Bootstrap是个优秀的UI框架，但是复杂的组件会带有过多的DOM结构，增加了编码复杂性。所以我们设计时必须引入JS的帮助，使用明确的简单的模板，用JS来生成一些额外的DOM。</li>
+    <li>在某些情况下，若是库本身没有加载成功，比如CSS和JS文件因为网络原因没有加载，那么我们必须保证页面的主逻辑是流畅的。</li>
+    <li>我们希望，在库成功加载之后，用户的其他业务逻辑是不变的。例如对于一个id为select的select元素，我们进行了大量新的DOM生成，但是若是其他脚本中使用了$('#select').val()仍然能准确获得数据，即便页面上看起来已经没有了这个元素。</li>
+  </ul>
+
+  <h1>引入方式</h1>
+  <p>在页面上引入JS和CSS模板：</p>
+  <pre><code>&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;http://assets.zjzsxhy.com/g/bpc/0.2.0/bpc.min.css&#x22;&#x3E;
+&#x3C;script src=&#x22;http://assets.zjzsxhy.com/g/bpc/0.2.0/bpc.min.js&#x22;&#x3E;&#x3C;/script&#x3E;</code></pre>
+  <p>若是通过了动态代码添加了新的模板，只需要在全局调用BPC.render重新渲染即可。</p>
+
+  <h1>组件</h1>
+  <ul>
+    <li>基础组件：
+      <ul>
+        <li><a href="icon.html">图标</a></li>
+        <li><a href="button.html">按钮</a></li>
+        <li><a href="input.html">输入框</a></li>
+        <li><a href="table.html">表格</a></li>
+      </ul>
+    </li>
+    <li>脚本组件：
+      <ul>
+        <li><a href="radio.html">单选框</a></li>
+        <li><a href="checkbox.html">复选框</a></li>
+        <li><a href="select.html">选择框</a></li>
+        <li><a href="pagination.html">分页器</a></li>
+      </ul>
+    </li>
+    <li>最佳实践：
+      <ul>
+        <li><a href="form.html">表单</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <h1>TODO</h1>
+  <ul>
+    <li>Radio
+      <ul>
+        <li>disabled</li>
+      </ul>
+    </li>
+    <li>Checkbox
+      <ul>
+        <li>disabled</li>
+      </ul>
+    </li>
+    <li>Input
+      <ul>
+        <li>disabled</li>
+      </ul>
+    </li>
+    <li>Select
+      <ul>
+        <li>disabled</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>
