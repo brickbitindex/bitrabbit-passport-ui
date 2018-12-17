@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BitRabbit Passport UI</title>
+  <link rel="stylesheet" href="https://assets.zjzsxhy.com/g/bpc/0.3.0/bpc.min.css">
+  <script src="https://assets.zjzsxhy.com/g/bpc/0.3.0/bpc.min.js"></script>
+  <style>
+    pre {
+      background-color: #f5f5f5;
+      border: 1px solid #d9d9d9;
+      padding: 12px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Switch - BitRabbit Passport UI</h1>
+  <p>开关</p>
+  <ul>
+    <li>脚本元素</li>
+    <li>需要JS</li>
+    <li>锚定选择器: input.bpc-switch[type="checkbox"]</li>
+  </ul>
+  <h2>基本使用</h2>
+  <div class="row">
+    <input class="bpc-switch" type="checkbox">
+  </div>
+  <pre><code>&#x3C;input class=&#x22;bpc-switch&#x22; type=&#x22;checkbox&#x22;&#x3E;</code></pre>
+  <h2>带开关文字：配置项bpc-checked-text, bpc-unchecked-text</h2>
+  <div class="row">
+    <input class="bpc-switch" type="checkbox" bpc-checked-text="开" bpc-unchecked-text="关" checked>
+  </div>
+  <pre><code>&#x3C;input class=&#x22;bpc-switch&#x22; type=&#x22;checkbox&#x22; bpc-checked-text=&#x22;&#x5F00;&#x22; bpc-unchecked-text=&#x22;&#x5173;&#x22; checked&#x3E;</code></pre>
+  <h2>尺寸：配置项bpc-size</h2>
+  <div class="row">
+<input class="bpc-switch" type="checkbox" bpc-size="large">
+<input class="bpc-switch" type="checkbox">
+<input class="bpc-switch" type="checkbox" bpc-size="small">
+  </div>
+  <pre><code>&#x3C;input class=&#x22;bpc-switch&#x22; type=&#x22;checkbox&#x22; bpc-size=&#x22;large&#x22;&#x3E;
+&#x3C;input class=&#x22;bpc-switch&#x22; type=&#x22;checkbox&#x22;&#x3E;
+&#x3C;input class=&#x22;bpc-switch&#x22; type=&#x22;checkbox&#x22; bpc-size=&#x22;small&#x22;&#x3E;</code></pre>
+  <h2>配置</h2>
+  <div>
+    <table class="bpc-table">
+      <thead>
+        <tr>
+          <td>配置项</td>
+          <td>原生</td>
+          <td>描述</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>bpc-size</td>
+          <td>N</td>
+          <td>尺寸大小，取值空, large, small</td>
+        </tr>
+        <tr>
+          <td>bpc-checked-text</td>
+          <td>N</td>
+          <td>当开关打开时显示的文字</td>
+        </tr>
+        <tr>
+          <td>bpc-unchecked-text</td>
+          <td>N</td>
+          <td>当开关关闭时显示的文字</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

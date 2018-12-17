@@ -38,7 +38,7 @@
 
   &::before {
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid $primary-color-2;
     border-image: linear-gradient(-45deg, $primary-color-1, $primary-color-2);
     border-image-slice: 1;
     content: '';
