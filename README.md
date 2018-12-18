@@ -1,5 +1,9 @@
 # BitRabbit Passport UI
 
+## 项目
+
+请看首页[https://brickbitindex.github.io/bitrabbit-passport-ui/](https://brickbitindex.github.io/bitrabbit-passport-ui/)。
+
 ## 开发
 
 0. 全局安装http-server
