@@ -4,6 +4,7 @@ import './Checkbox';
 import './Switch';
 import './Select';
 import './Pagination';
+import './Loading';
 
 import './style.scss';
 
