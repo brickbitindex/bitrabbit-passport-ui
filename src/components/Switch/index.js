@@ -1,5 +1,6 @@
 import BaseComponent from '../BaseComponent';
-import BPC from '../BPC';
+import BPC from '../../BPC';
+import { str2ele } from '../../utils';
 
 const textTemplate = '<span class="bpcr-switch-text">@t</span>';
 
@@ -30,9 +31,9 @@ class Switch extends BaseComponent {
 
   render() {
     super.render();
-    const $check = this._str2ele(textTemplate.replace('@t', this.$template.getAttribute('bpc-checked-text') || ''));
+    const $check = str2ele(textTemplate.replace('@t', this.$template.getAttribute('bpc-checked-text') || ''));
     $check.classList.add('checked');
-    const $uncheck = this._str2ele(textTemplate.replace('@t', this.$template.getAttribute('bpc-unchecked-text') || ''));
+    const $uncheck = str2ele(textTemplate.replace('@t', this.$template.getAttribute('bpc-unchecked-text') || ''));
     $uncheck.classList.add('unchecked');
     this.$wrapper.appendChild($check);
     this.$wrapper.appendChild($uncheck);

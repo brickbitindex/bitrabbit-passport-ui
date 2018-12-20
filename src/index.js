@@ -1,9 +1,12 @@
 import BPC from './BPC';
-import './Radio';
-import './Checkbox';
-import './Switch';
-import './Select';
-import './Pagination';
+// components
+import './components/Radio';
+import './components/Checkbox';
+import './components/Switch';
+import './components/Select';
+import './components/Pagination';
+// plugins
+import './plugins/Tooltip';
 
 import './style.scss';
 

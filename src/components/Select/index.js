@@ -1,5 +1,6 @@
 import BaseComponent from '../BaseComponent';
-import BPC from '../BPC';
+import BPC from '../../BPC';
+import { str2ele } from '../../utils';
 
 const valueTemplate = '<span class="bpcr-select-value"><span></span><i class="iconfont icon-down"></i></span>';
 const dropTemplate = '<div class="bpcr-select-drop"></div>';
@@ -47,9 +48,9 @@ class Select extends BaseComponent {
 
   render() {
     super.render();
-    this.$value = this._str2ele(valueTemplate);
+    this.$value = str2ele(valueTemplate);
     this.$wrapper.appendChild(this.$value);
-    this.$drop = this._str2ele(dropTemplate);
+    this.$drop = str2ele(dropTemplate);
     this.$wrapper.appendChild(this.$drop);
     this.$wrapper.addEventListener('click', () => {
       if (this.show) {
@@ -62,7 +63,7 @@ class Select extends BaseComponent {
 
     this.$template.querySelectorAll('option').forEach(($option) => {
       const html = optionTemplate.replace('@t', $option.innerText).replace('@v', $option.value);
-      const $o = this._str2ele(html);
+      const $o = str2ele(html);
       if ($option.disabled) {
         $o.setAttribute('disabled', '');
       }
