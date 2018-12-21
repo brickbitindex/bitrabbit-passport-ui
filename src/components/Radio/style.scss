@@ -25,6 +25,21 @@
       transform: scale3d(1, 1, 1);
     }
   }
+
+  &[disabled] {
+    cursor: not-allowed;
+    .bpcr-radio::before {
+      opacity: .4;
+    }
+
+    .bpcr-radio::after {
+      opacity: .3;
+    }
+
+    .bpcr-radio-label {
+      color: rgba(0, 0, 0, 0.25);
+    }
+  }
 }
 
 .bpcr-radio {

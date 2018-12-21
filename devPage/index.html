@@ -111,6 +111,11 @@
     <input type="text" class="bpc-input" placeholder="Normal Size">
     <input type="text" class="bpc-input" placeholder="Small Size" bpc-size="small">
   </div>
+  <div class="row exp1">
+    <input type="text" class="bpc-input" disabled placeholder="Large Size" bpc-size="large">
+    <input type="text" class="bpc-input" disabled placeholder="Normal Size">
+    <input type="text" class="bpc-input" disabled placeholder="Small Size" bpc-size="small">
+  </div>
 
   <h1>Radio</h1>
   <div class="row">
@@ -120,6 +125,14 @@
       <input type="radio" name="g1" value="3" bpc-text="C">
     </span>
   </div>
+  <div class="row">
+    <span class="bpc-radio-group">
+      <input type="radio" disabled name="g2" value="4" bpc-text="D" checked>
+      <input type="radio" disabled name="g2" value="5" bpc-text="E">
+      <input type="radio" name="g2" value="6" bpc-text="F">
+      <input type="radio" name="g2" value="7" bpc-text="F">
+    </span>
+  </div>
 
   <h1>Checkbox</h1>
   <div class="row">
@@ -127,6 +140,15 @@
       <input type="checkbox" name="g2" value="1" bpc-text="A" checked>
       <input type="checkbox" name="g2" value="2" bpc-text="B" checked>
       <input type="checkbox" name="g2" value="3" bpc-text="C">
+    </span>
+  </div>
+
+  <div class="row">
+    <span class="bpc-checkbox-group">
+      <input type="checkbox" name="g2" value="4" bpc-text="D`" checked>
+      <input type="checkbox" name="g2" value="5" bpc-text="E">
+      <input type="checkbox" disabled name="g2" value="6" bpc-text="F">
+      <input type="checkbox" disabled name="g2" value="7" bpc-text="G" checked>
     </span>
   </div>
 
@@ -164,6 +186,27 @@
       <option value="4">D</option>
     </select>
     <select class="bpc-select" bpc-size="small">
+      <option value="1">A</option>
+      <option value="2" selected>B</option>
+      <option value="3" disabled>C</option>
+      <option value="4">D</option>
+    </select>
+  </div>
+
+  <div class="row exp4">
+    <select class="bpc-select" disabled bpc-size="large">
+      <option value="1" selected>A</option>
+      <option value="2">B</option>
+      <option value="3" disabled>C</option>
+      <option value="4">D</option>
+    </select>
+    <select class="bpc-select" id="select1">
+      <option value="1">A</option>
+      <option value="2" selected>B</option>
+      <option value="3" disabled>C</option>
+      <option value="4">D</option>
+    </select>
+    <select class="bpc-select" disabled bpc-size="small">
       <option value="1">A</option>
       <option value="2" selected>B</option>
       <option value="3" disabled>C</option>

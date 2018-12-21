@@ -40,6 +40,20 @@ class RadioGroup extends BaseComponent {
     }
   }
 
+  _updateDisabled() {
+    let newValue;
+    const $tempDisabled = this.$template.querySelectorAll('input[type="radio"][disabled]');
+    if ($tempDisabled) {
+      $tempDisabled.forEach((item) => {
+        newValue = item.getAttribute('value');
+        const $disabled = this.$wrapper.querySelector(`.bpcr-radio-wrapper[bpc-value="${newValue}"]`);
+        if ($disabled) {
+          $disabled.setAttribute('disabled', '');
+        }
+      });
+    }
+  }
+
   render() {
     super.render();
     const $inputs = this.$template.querySelectorAll('input[type="radio"]');
@@ -47,12 +61,16 @@ class RadioGroup extends BaseComponent {
       const html = radioTemplate.replace('@l', $input.getAttribute('bpc-text')).replace('@v', $input.getAttribute('value'));
       const $r = str2ele(html);
       $r.addEventListener('click', (e) => {
-        const v = e.currentTarget.getAttribute('bpc-value');
-        this._updateChecked(v);
+        const disabledFilter = e.currentTarget.hasAttribute('disabled');
+        if (disabledFilter === false) {
+          const v = e.currentTarget.getAttribute('bpc-value');
+          this._updateChecked(v);
+        }
       }, false);
       this.$wrapper.appendChild($r);
     });
     this._updateChecked();
+    this._updateDisabled();
   }
 }
 
