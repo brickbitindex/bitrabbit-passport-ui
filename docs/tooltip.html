@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BitRabbit Passport UI</title>
+  <link rel="stylesheet" href="https://assets.zjzsxhy.com/g/bpc/0.4.2/bpc.min.css">
+  <script src="https://assets.zjzsxhy.com/g/bpc/0.4.2/bpc.min.js"></script>
+  <style>
+    pre {
+      background-color: #f5f5f5;
+      border: 1px solid #d9d9d9;
+      padding: 12px;
+      line-height: 1.5;
+    }
+    .bpcr-select-wrapper {
+      width: 200px;
+    }
+    .my-tooltip .bpc-tooltip-content {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tooltip - BitRabbit Passport UI</h1>
+  <p>提示是很常见的功能。只需要在元素上加入bpc-tooltip="提示"即可。</p>
+  <ul>
+    <li>脚本元素</li>
+    <li>需要JS</li>
+    <li>锚定选择器: [bpc-tooltip]</li>
+  </ul>
+  <h2>基本使用</h2>
+  <div class="row">
+    <span bpc-tooltip="I am a span">Hover Me</span>
+    <button class="bpc-btn" bpc-tooltip="I am a button">Hover Me</button>
+    <select class="bpc-select" bpc-tooltip="I am a select">
+      <option value="1">A</option>
+      <option value="2" selected>B</option>
+      <option value="3" disabled>C</option>
+      <option value="4">D</option>
+    </select>
+  </div>
+  <pre><code>&#x3C;span bpc-tooltip=&#x22;I am a span&#x22;&#x3E;Hover Me&#x3C;/span&#x3E;
+&#x3C;button class=&#x22;bpc-btn&#x22; bpc-tooltip=&#x22;I am a button&#x22;&#x3E;Hover Me&#x3C;/button&#x3E;
+&#x3C;select class=&#x22;bpc-select&#x22; bpc-tooltip=&#x22;I am a select&#x22;&#x3E;
+  &#x3C;option value=&#x22;1&#x22;&#x3E;A&#x3C;/option&#x3E;
+  &#x3C;option value=&#x22;2&#x22; selected&#x3E;B&#x3C;/option&#x3E;
+  &#x3C;option value=&#x22;3&#x22; disabled&#x3E;C&#x3C;/option&#x3E;
+  &#x3C;option value=&#x22;4&#x22;&#x3E;D&#x3C;/option&#x3E;
+&#x3C;/select&#x3E;</code></pre>
+  <h2>指定class：配置项bpc-tooltip-class</h2>
+  <div class="row">
+    <span bpc-tooltip="I am a span" bpc-tooltip-class="my-tooltip">Hover Me</span>
+  </div>
+  <pre><code>&#x3C;span bpc-tooltip=&#x22;I am a span&#x22; bpc-tooltip-class=&#x22;my-tooltip&#x22;&#x3E;Hover Me&#x3C;/span&#x3E;</code></pre>
+  <pre><code>.my-tooltip .bpc-tooltip-content {
+  color: red;
+}</code></pre>
+
+  <h2>配置</h2>
+  <div>
+    <table class="bpc-table">
+      <thead>
+        <tr>
+          <td>配置项</td>
+          <td>原生</td>
+          <td>描述</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>bpc-tooltip</td>
+          <td>N</td>
+          <td>提示文本</td>
+        </tr>
+        <tr>
+          <td>bpc-tooltip-class</td>
+          <td>N</td>
+          <td>提示框指定class</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,22 +1,21 @@
+import { str2ele } from '../utils';
+
 export default class BaseComponent {
   static className = ''
+  bpcComponent = true
   wrapperTamplate = `<div>
   <div class="bpc-origin"></div>
 </div>`
+  $template = undefined
+  $wrapper = undefined
 
   constructor(template) {
     this.$template = template;
     this.$wrapper = null;
   }
 
-  _str2ele(template) {
-    const $el = document.createElement('div');
-    $el.insertAdjacentHTML('beforeend', template);
-    return $el.firstChild;
-  }
-
   render() {
-    const $wrapper = this._str2ele(this.wrapperTamplate);
+    const $wrapper = str2ele(this.wrapperTamplate);
     const $origin = $wrapper.querySelector('.bpc-origin');
     const $template = this.$template;
     $template.parentNode.insertBefore($wrapper, $template);

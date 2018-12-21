@@ -1,14 +1,20 @@
 @import './const.scss';
 
-@import './Icon/style.css';
-@import './Button/style.scss';
-@import './Input/style.scss';
-@import './Radio/style.scss';
-@import './Checkbox/style.scss';
-@import './Form/style.scss';
-@import './Checkbox/style.scss';
-@import './Switch/style.scss';
-@import './Select/style.scss';
-@import './Table/style.scss';
-@import './Pagination/style.scss';
-@import './Loading/style.scss';
+// components
+
+@import './components/Icon/style.css';
+@import './components/Button/style.scss';
+@import './components/Input/style.scss';
+@import './components/Radio/style.scss';
+@import './components/Checkbox/style.scss';
+@import './components/Form/style.scss';
+@import './components/Checkbox/style.scss';
+@import './components/Switch/style.scss';
+@import './components/Select/style.scss';
+@import './components/Table/style.scss';
+@import './components/Pagination/style.scss';
+@import './components/Loading/style.scss';
+
+// plugins
+
+@import './plugins/Tooltip/style.scss';

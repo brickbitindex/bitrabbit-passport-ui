@@ -1,5 +1,6 @@
 import BaseComponent from '../BaseComponent';
-import BPC from '../BPC';
+import BPC from '../../BPC';
+import { str2ele } from '../../utils';
 
 const wrapperTamplate = '<span class="bpc-pagination-wrapper"></span>';
 const buttonTemplate = '<button class="bpc-btn" bpc-icon>@t</button>';
@@ -14,7 +15,7 @@ class Pagination extends BaseComponent {
   size = undefined;
 
   _addBtn(index, target) {
-    const $btn = this._str2ele(buttonTemplate.replace('@t', index));
+    const $btn = str2ele(buttonTemplate.replace('@t', index));
     if (this.size) {
       $btn.setAttribute('bpc-size', this.size);
     }
@@ -41,7 +42,7 @@ class Pagination extends BaseComponent {
   }
 
   _addEllipsis() {
-    this.$wrapper.appendChild(this._str2ele('<i class="iconfont icon-ellipsis"></i>'));
+    this.$wrapper.appendChild(str2ele('<i class="iconfont icon-ellipsis"></i>'));
   }
 
   _updatePage() {
@@ -111,7 +112,7 @@ class Pagination extends BaseComponent {
   }
 
   render() {
-    const $wrapper = this._str2ele(wrapperTamplate);
+    const $wrapper = str2ele(wrapperTamplate);
     this.$template.appendChild($wrapper);
     this.$wrapper = $wrapper;
     this.template = this.$template.getAttribute('bpc-url-template');

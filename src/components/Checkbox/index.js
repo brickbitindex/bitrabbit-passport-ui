@@ -1,6 +1,7 @@
 /* eslint no-param-reassign: 0 */
 import BaseComponent from '../BaseComponent';
-import BPC from '../BPC';
+import BPC from '../../BPC';
+import { str2ele } from '../../utils';
 
 const checkboxTemplate = '<label class="bpcr-checkbox-wrapper" bpc-value="@v"><span class="bpcr-checkbox"></span><span class="bpcr-checkbox-label">@l</span></label>';
 
@@ -38,7 +39,7 @@ class CheckboxGroup extends BaseComponent {
     const $inputs = this.$template.querySelectorAll('input[type="checkbox"]');
     $inputs.forEach(($input) => {
       const html = checkboxTemplate.replace('@l', $input.getAttribute('bpc-text')).replace('@v', $input.getAttribute('value'));
-      const $r = this._str2ele(html);
+      const $r = str2ele(html);
       $r.addEventListener('click', (e) => {
         const $t = e.currentTarget;
         const v = $t.getAttribute('bpc-value');

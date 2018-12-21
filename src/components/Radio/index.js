@@ -1,5 +1,6 @@
 import BaseComponent from '../BaseComponent';
-import BPC from '../BPC';
+import BPC from '../../BPC';
+import { str2ele } from '../../utils';
 
 const radioTemplate = '<label class="bpcr-radio-wrapper" bpc-value="@v"><span class="bpcr-radio"></span><span class="bpcr-radio-label">@l</span></label>';
 
@@ -44,7 +45,7 @@ class RadioGroup extends BaseComponent {
     const $inputs = this.$template.querySelectorAll('input[type="radio"]');
     $inputs.forEach(($input) => {
       const html = radioTemplate.replace('@l', $input.getAttribute('bpc-text')).replace('@v', $input.getAttribute('value'));
-      const $r = this._str2ele(html);
+      const $r = str2ele(html);
       $r.addEventListener('click', (e) => {
         const v = e.currentTarget.getAttribute('bpc-value');
         this._updateChecked(v);
