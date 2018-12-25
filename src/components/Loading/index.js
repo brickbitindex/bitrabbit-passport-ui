@@ -26,7 +26,6 @@ class Loading extends BaseComponent {
     }
   }
   render() {
-    console.log(this.$template);
     const type = this.$template.getAttribute('bpc-type');
     this._updateType(type);
   }
