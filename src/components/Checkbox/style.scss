@@ -25,6 +25,21 @@
       transform: scale3d(1, 1, 1);
     }
   }
+
+  &[disabled] {
+    cursor: not-allowed;
+    .bpcr-checkbox::before {
+      opacity: .4;
+    }
+
+    .bpcr-checkbox::after {
+      opacity: .3;
+    }
+
+    .bpcr-checkbox-label {
+      color: rgba(0, 0, 0, 0.25);
+    }
+  }
 }
 
 .bpcr-checkbox {

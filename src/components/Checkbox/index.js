@@ -34,6 +34,21 @@ class CheckboxGroup extends BaseComponent {
     });
   }
 
+  _updateDisabled() {
+    let newValue;
+    const $tempDisabled = this.$template.querySelectorAll('input[type="checkbox"][disabled]');
+
+    if ($tempDisabled) {
+      $tempDisabled.forEach((item) => {
+        newValue = item.getAttribute('value');
+        const $disabled = this.$wrapper.querySelector(`.bpcr-checkbox-wrapper[bpc-value="${newValue}"]`);
+        if ($disabled) {
+          $disabled.setAttribute('disabled', '');
+        }
+      });
+    }
+  }
+
   render() {
     super.render();
     const $inputs = this.$template.querySelectorAll('input[type="checkbox"]');
@@ -44,11 +59,15 @@ class CheckboxGroup extends BaseComponent {
         const $t = e.currentTarget;
         const v = $t.getAttribute('bpc-value');
         const checked = $t.classList.contains('checked');
-        this._updateChecked(v, !checked);
+        const filterDisabled = e.currentTarget.hasAttribute('disabled');
+        if (filterDisabled === false) {
+          this._updateChecked(v, !checked);
+        }
       }, false);
       this.$wrapper.appendChild($r);
     });
     this._updateChecked();
+    this._updateDisabled();
   }
 }
 

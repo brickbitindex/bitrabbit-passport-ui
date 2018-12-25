@@ -3,7 +3,7 @@ import BPC from '../../BPC';
 import { str2ele } from '../../utils';
 
 const valueTemplate = '<span class="bpcr-select-value"><span></span><i class="iconfont icon-down"></i></span>';
-const dropTemplate = '<div class="bpcr-select-drop"></div>';
+const dropTemplate = '<div class="bpcr-select-drop" bpc-disabled="@d"></div>';
 const optionTemplate = '<div class="bpcr-select-option" bpc-value="@v">@t</div>';
 
 class Select extends BaseComponent {
@@ -46,6 +46,14 @@ class Select extends BaseComponent {
     }
   }
 
+  _updateDisabled() {
+    const disabledTemplate = this.$template.hasAttribute('disabled');
+    if (disabledTemplate === true) {
+      const disabledWrapper = this.$template.parentNode.parentNode;
+      disabledWrapper.setAttribute('disabled', '');
+    }
+  }
+
   render() {
     super.render();
     this.$value = str2ele(valueTemplate);
@@ -53,12 +61,15 @@ class Select extends BaseComponent {
     this.$drop = str2ele(dropTemplate);
     this.$wrapper.appendChild(this.$drop);
     this.$wrapper.addEventListener('click', () => {
-      if (this.show) {
-        this.$wrapper.classList.remove('show');
-      } else {
-        this.$wrapper.classList.add('show');
+      const disabledFilter = this.$wrapper.hasAttribute('disabled');
+      if (disabledFilter === false) {
+        if (this.show) {
+          this.$wrapper.classList.remove('show');
+        } else {
+          this.$wrapper.classList.add('show');
+        }
+        this.show = !this.show;
       }
-      this.show = !this.show;
     }, false);
 
     this.$template.querySelectorAll('option').forEach(($option) => {
@@ -77,6 +88,7 @@ class Select extends BaseComponent {
       this.$drop.appendChild($o);
     });
     this._updateSelected();
+    this._updateDisabled();
   }
 }
 
