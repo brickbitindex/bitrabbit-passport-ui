@@ -1,0 +1,41 @@
+.message-container {
+  position: fixed;
+  left: 50%;
+  top: 16px;
+  transform: translateX(-50%);
+  z-index: 1000;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  animation: changeTop .3s infinite linear;
+  .message-content {
+    padding: 8px;
+    i {
+      margin-right: 8px;
+    }
+    &.success {
+      i {
+        color: $primary-color-2;
+      }
+    }
+    &.error {
+      i {
+        color: $primary-color-1;
+      }
+    }
+    &.warning {
+      i {
+        color: #f9ad18;
+      }
+    }
+  }
+}
+
+@keyframes changeTop {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 16px;
+  }
+}

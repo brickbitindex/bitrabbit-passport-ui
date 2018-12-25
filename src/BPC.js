@@ -1,3 +1,5 @@
+import { str2ele } from './utils';
+
 class BPCcls {
   _components = [];
   _plugins = [];
@@ -39,6 +41,29 @@ class BPCcls {
         });
       }
     }
+  }
+
+  message(type, msg) {
+    let icon;
+    if (type === 'success') {
+      icon = 'icon-check-circle-fill';
+    } else if (type === 'error') {
+      icon = 'icon-close-circle-fill';
+    } else if (type === 'warning') {
+      icon = 'icon-warning-circle-fill';
+    }
+    const container = `
+          <div className="message-container">
+            <div className="message-content ${type}">
+              <i class="iconfont ${icon}"></i>${msg}
+            </div>
+          </div>
+        `;
+    const $container = str2ele(container);
+    document.body.appendChild($container);
+    setTimeout(() => {
+      document.body.removeChild($container);
+    }, 3000);
   }
 
   init() {
