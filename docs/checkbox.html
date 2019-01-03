@@ -26,17 +26,32 @@
   </ul>
   <h2>基本使用</h2>
   <div class="row">
-<span class="bpc-checkbox-group">
-  <input type="checkbox" name="g1" value="1" bpc-text="A" checked>
-  <input type="checkbox" name="g1" value="2" bpc-text="B">
-  <input type="checkbox" name="g1" value="3" bpc-text="C">
-</span>
+    <span class="bpc-checkbox-group">
+      <input type="checkbox" name="g1" value="1" bpc-text="A" checked>
+      <input type="checkbox" name="g1" value="2" bpc-text="B">
+      <input type="checkbox" name="g1" value="3" bpc-text="C">
+    </span>
   </div>
   <pre><code>&#x3C;span class=&#x22;bpc-checkbox-group&#x22;&#x3E;
   &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;g1&#x22; value=&#x22;1&#x22; bpc-text=&#x22;A&#x22; checked&#x3E;
   &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;g1&#x22; value=&#x22;2&#x22; bpc-text=&#x22;B&#x22;&#x3E;
   &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;g1&#x22; value=&#x22;3&#x22; bpc-text=&#x22;C&#x22;&#x3E;
 &#x3C;/span&#x3E;</code></pre>
+
+  <h2>禁止状态：配置项disabled</h2>
+  <div class="row">
+    <span class="bpc-checkbox-group">
+      <input type="checkbox" disabled name="g1" value="1" bpc-text="A" checked>
+      <input type="checkbox" name="g1" value="2" bpc-text="B">
+      <input type="checkbox" name="g1" value="3" bpc-text="C">
+    </span>
+  </div>
+  <pre><code>&#x3C;span class=&#x22;bpc-checkbox-group&#x22;&#x3E;
+  &#x3C;input type=&#x22;checkbox&#x22; disabled name=&#x22;g1&#x22; value=&#x22;1&#x22; bpc-text=&#x22;A&#x22; checked&#x3E;
+  &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;g1&#x22; value=&#x22;2&#x22; bpc-text=&#x22;B&#x22;&#x3E;
+  &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;g1&#x22; value=&#x22;3&#x22; bpc-text=&#x22;C&#x22;&#x3E;
+  &#x3C;/span&#x3E;</code>
+</pre>
 
 <h2>配置</h2>
 <div>
@@ -53,6 +68,11 @@
         <td>bpc-text</td>
         <td>N</td>
         <td>选项显示的标签文字</td>
+      </tr>
+      <tr>
+        <td>disabled</td>
+        <td>N</td>
+        <td>禁用复选框</td>
       </tr>
     </tbody>
   </table>
