@@ -115,7 +115,7 @@ class Pagination extends BaseComponent {
     const $wrapper = str2ele(wrapperTamplate);
     this.$template.appendChild($wrapper);
     this.$wrapper = $wrapper;
-    this.template = this.$template.getAttribute('bpc-url-template');
+    this.template = unescape(this.$template.getAttribute('bpc-url-template'));
     this.openTarget = this.$template.getAttribute('bpc-target');
     this.size = this.$template.getAttribute('bpc-size');
     this._updatePage();
