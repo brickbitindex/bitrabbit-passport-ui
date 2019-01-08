@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="http://localhost:9090/index.css">
+  <script src="https://assets.bitrabbit.com/g/jquery/3.3.1/jquery.min.js"></script>
   <style>
     .row {
       margin-bottom: 24px;
@@ -165,12 +166,14 @@
 
   <h1>Select</h1>
   <div class="row exp4">
-    <select class="bpc-select">
+    <select class="bpc-select" id="selectExp">
       <option value="1">A</option>
       <option value="2" selected>B</option>
       <option value="3" disabled>C</option>
       <option value="4">D</option>
     </select>
+
+    <div id="selectExpResult"></div>
   </div>
   <div class="row exp4">
     <select class="bpc-select" bpc-size="large">
@@ -410,5 +413,16 @@
   </div>
 
   <script src="http://localhost:9090/index.js"></script>
+
+  <script>
+    $(function() {
+      // select
+      var $select = $('#selectExp');
+      $select.change(function(e) {
+        var $s = $(e.target);
+        $('#selectExpResult').html($s.val());
+      });
+    });
+  </script>
 </body>
 </html>

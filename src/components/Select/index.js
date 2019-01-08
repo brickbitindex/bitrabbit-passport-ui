@@ -1,6 +1,6 @@
 import BaseComponent from '../BaseComponent';
 import BPC from '../../BPC';
-import { str2ele } from '../../utils';
+import { str2ele, fireEvent } from '../../utils';
 
 const valueTemplate = '<span class="bpcr-select-value"><span></span><i class="iconfont icon-down"></i></span>';
 const dropTemplate = '<div class="bpcr-select-drop" bpc-disabled="@d"></div>';
@@ -14,7 +14,7 @@ class Select extends BaseComponent {
 
   show = false;
 
-  _updateSelected(value) {
+  _updateSelected(value, triggerChange) {
     let newValue = value;
     if (!value) {
       newValue = this.$template.value;
@@ -43,6 +43,10 @@ class Select extends BaseComponent {
     $willSelect = this.$wrapper.querySelector('.bpcr-select-value span');
     if ($willSelect) {
       $willSelect.innerText = newText;
+    }
+    // 触发change事件
+    if (triggerChange) {
+      fireEvent(this.$template, 'change');
     }
   }
 
@@ -82,7 +86,7 @@ class Select extends BaseComponent {
         const $e = e.currentTarget;
         if ($e.getAttribute('disabled') === null) {
           const v = $e.getAttribute('bpc-value');
-          this._updateSelected(v);
+          this._updateSelected(v, true);
         }
       }, false);
       this.$drop.appendChild($o);
