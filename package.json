@@ -1,6 +1,6 @@
 {
   "name": "bitrabbit-passport-ui",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "BitRabbit Passport UI.",
   "main": "lib",
   "files": [

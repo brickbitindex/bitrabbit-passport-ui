@@ -13,6 +13,23 @@
     position: relative;
     padding: 0;
     list-style: none;
+
+    &[bpc-error-msg] {
+      position: relative;
+
+      .bpc-input,
+      .bpcr-select-wrapper {
+        border-color: $primary-color-1;
+      }
+  
+      &::after {
+        content: 'asfaf';
+        position: absolute;
+        top: 100%;
+        color: $primary-color-1;
+        animation: bpc-form-error-show $anime-duration*4 ease;
+      }
+    }
   }
 
   &>li {
@@ -82,9 +99,25 @@
     .bpc-label::after {
       margin-right: $unit;
     }
+
+    &[bpc-error-msg]::after {
+      right: 0;
+    }
   }
 
   &[bpc-label-layout="inline"]>ul>li {
     margin-bottom: 0;
+  }
+}
+
+@keyframes bpc-form-error-show {
+  0% {
+    opacity: 0;
+    transform: translateY(-$unit);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
