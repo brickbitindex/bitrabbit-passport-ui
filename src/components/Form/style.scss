@@ -14,7 +14,7 @@
     padding: 0;
     list-style: none;
 
-    &[bpc-error-msg] {
+    &[bpc-error-msg]:not([bpc-error-msg=""]) {
       position: relative;
 
       .bpc-input,
