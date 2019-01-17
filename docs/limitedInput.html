@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BitRabbit Passport UI</title>
+  <link rel="stylesheet" href="https://assets.zjzsxhy.com/g/bpc/0.4.9/bpc.min.css">
+  <script src="https://assets.zjzsxhy.com/g/bpc/0.4.9/bpc.min.js"></script>
+  <style>
+    pre {
+      background-color: #f5f5f5;
+      border: 1px solid #d9d9d9;
+      padding: 12px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Limited Input - BitRabbit Passport UI</h1>
+  <p>受限输入框，主要是为了类似验证码之类的，限制长度的输入框。</p>
+  <ul>
+    <li>脚本元素</li>
+    <li>需要JS</li>
+    <li>锚定选择器: .bpc-limited-input</li>
+  </ul>
+  <h2>限制长度：配置项bpc-length</h2>
+  <div class="row">
+    <input class="bpc-limited-input" bpc-length="5">
+    <input class="bpc-limited-input" bpc-length="6">
+    <input class="bpc-limited-input" bpc-length="7">
+  </div>
+  <pre><code>&lt;input class=&quot;bpc-limited-input&quot; bpc-length=&quot;5&quot;&gt;
+&lt;input class=&quot;bpc-limited-input&quot; bpc-length=&quot;6&quot;&gt;
+&lt;input class=&quot;bpc-limited-input&quot; bpc-length=&quot;7&quot;&gt;</code></pre>
+
+  <h2>尺寸：配置项bpc-size</h2>
+  <div class="row">
+    <input class="bpc-limited-input" bpc-length="5">
+    <input class="bpc-limited-input" bpc-length="5" bpc-size="large">
+    <input class="bpc-limited-input" bpc-length="5" bpc-size="small">
+  </div>
+  <pre><code>&lt;input class=&quot;bpc-limited-input&quot; bpc-length=&quot;5&quot;&gt;
+&lt;input class=&quot;bpc-limited-input&quot; bpc-length=&quot;5&quot; bpc-size=&quot;large&quot;&gt;
+&lt;input class=&quot;bpc-limited-input&quot; bpc-length=&quot;5&quot; bpc-size=&quot;small&quot;&gt;</code></pre>
+
+  <h2>配置</h2>
+  <div>
+    <table class="bpc-table">
+      <thead>
+        <tr>
+          <td>配置项</td>
+          <td>原生</td>
+          <td>描述</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>bpc-size</td>
+          <td>N</td>
+          <td>尺寸大小，取值空, large, small</td>
+        </tr>
+        <tr>
+          <td>disabled</td>
+          <td>N</td>
+          <td>禁用输入框</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

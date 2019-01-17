@@ -5,6 +5,8 @@ import './components/Checkbox';
 import './components/Switch';
 import './components/Select';
 import './components/Pagination';
+import './components/LimitedInput';
+
 // plugins
 import './plugins/Tooltip';
 

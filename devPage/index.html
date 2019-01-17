@@ -465,16 +465,21 @@
     </div>
   </div>
 
+  <h1>Limited Input</h1>
+  <div class="row">
+    <input class="bpc-limited-input" bpc-length="5" id="limitInput">
+    <input class="bpc-limited-input" bpc-length="5" bpc-size="large">
+    <input class="bpc-limited-input" bpc-length="5" bpc-size="small">
+  </div>
+
   <script src="http://localhost:9090/index.js"></script>
 
   <script>
     $(function() {
-      // select
-      var $select = $('#selectExp');
-      $select.change(function(e) {
-        var $s = $(e.target);
-        $('#selectExpResult').html($s.val());
-      });
+      // var $limitInput = $('#limitInput');
+      // $limitInput.change(function(e) {
+      //   var $s = $(e.target);
+      // });
     });
   </script>
 </body>
