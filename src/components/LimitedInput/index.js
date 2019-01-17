@@ -53,7 +53,7 @@ class LimitedInput extends BaseComponent {
     this.$inputs = this.$wrapper.querySelectorAll('.bpcr-limited-input-block');
     this.$inputs = Array.prototype.slice.call(this.$inputs, 0);
     const size = this.$template.getAttribute('bpc-size');
-    console.log(size);
+    this.updateValue(this.$template.value);
     this.$inputs.forEach(($input) => {
       $input.setAttribute('bpc-size', size);
       $input.addEventListener('focus', this.handleInput.bind(this), false);
