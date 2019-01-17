@@ -14,6 +14,11 @@
     padding: 0;
     list-style: none;
 
+    .bpc-input,
+    .bpcr-select-wrapper {
+      width: 100%;
+    }
+
     &[bpc-error-msg]:not([bpc-error-msg=""]) {
       position: relative;
 
