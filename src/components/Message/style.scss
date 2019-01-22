@@ -4,10 +4,16 @@
   top: 16px;
   transform: translateX(-50%);
   z-index: 1000;
+  padding: 0 20px;
   font-size: 14px;
   text-align: center;
-  width: 100%;
-  animation: changeTop .3s infinite linear;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  // animation: changeTop 0.3s infinite linear;
+  // animation-fill-mode: forwards;
+  // animation-iteration-count:1;
+  transition: all .3s;
   .message-content {
     padding: 8px;
     i {

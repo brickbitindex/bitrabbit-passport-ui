@@ -1,5 +1,3 @@
-import { str2ele } from './utils';
-
 class BPCcls {
   _components = [];
   _plugins = [];
@@ -43,7 +41,7 @@ class BPCcls {
     }
   }
 
-  message(type, msg) {
+  message(type, msg, time = 3000) {
     let icon;
     if (type === 'success') {
       icon = 'icon-check-circle-fill';
@@ -53,17 +51,17 @@ class BPCcls {
       icon = 'icon-warning-circle-fill';
     }
     const container = `
-          <div className="message-container">
-            <div className="message-content ${type}">
+          <div class="message-container">
+            <div class="message-content ${type}">
               <i class="iconfont ${icon}"></i>${msg}
             </div>
           </div>
         `;
-    const $container = str2ele(container);
-    document.body.appendChild($container);
+    document.body.insertAdjacentHTML('beforeend', container);
     setTimeout(() => {
+      const $container = document.querySelector('.message-container');
       document.body.removeChild($container);
-    }, 3000);
+    }, time);
   }
 
   init() {

@@ -409,12 +409,14 @@
     </div>
   </div>
   <script src="http://localhost:9090/index.js"></script>
-
+  <div class="row exp4">
+    <button class="bpc-btn alert-message">点击我弹窗message框</button>
+  </div>
   <script>
-    const { message } = BPC;
-    message('success', 3);
-    message('error', 3);
-    message('warning', 3);
+    const g1 = document.querySelectorAll('[name="g1"]');
+    g1.change = function () {
+      console.log(this);
+    }
   </script>
 
 </body>
