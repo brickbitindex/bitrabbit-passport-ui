@@ -13,6 +13,23 @@
     position: relative;
     padding: 0;
     list-style: none;
+
+    &[bpc-error-msg]:not([bpc-error-msg=""]) {
+      position: relative;
+
+      .bpc-input,
+      .bpcr-select-wrapper {
+        border-color: $primary-color-1;
+      }
+  
+      &::after {
+        content: attr(bpc-error-msg);
+        position: absolute;
+        top: 100%;
+        color: $primary-color-1;
+        animation: bpc-form-error-show $anime-duration*4 ease;
+      }
+    }
   }
 
   &>li {
@@ -23,31 +40,84 @@
     margin-bottom: $unit * 1;
   }
 
-  &[bpc-has-label] li {
-    padding-left: 35%;
+  &[bpc-label-layout] li .bpc-label {
+    &::after {
+      content: ':';
+      margin-left: 2px;
+    }
+
+    &[required]::before {
+      content: '*';
+      margin-right: 4px;
+      font-family: SimSun;
+      color: $primary-color-1;
+    }
+  }
+
+  &[bpc-label-layout="horizontal"] li {
+    padding-left: 30%;
 
     .bpc-label {
       position: absolute;
       left: 0;
       top: 50%;
-      width: 35%;
+      width: 30%;
       text-align: right;
       transform: translate3d(0, -50%, 0);
       padding-right: $unit;
       white-space: nowrap;
       box-sizing: border-box;
+    }
+  }
+
+  &[bpc-label-layout="vertical"]>li {
+    &>* {
+      display: block;
+    }
+
+    .bpc-label {
+      padding: 0 0 $unit;
+      margin: 0;
+      text-align: left;
+      line-height: 1.5;
+      white-space: initial;
 
       &::after {
-        content: ':';
-        margin-left: 2px;
-      }
-
-      &[required]::before {
-        content: '*';
-        margin-right: 4px;
-        font-family: SimSun;
-        color: $primary-color-1;
+        display: none;
       }
     }
+  }
+
+  &[bpc-label-layout="inline"] li {
+    display: inline-block;
+    margin-right: $unit * 2;
+
+    &>* {
+      width: auto;
+    }
+
+    .bpc-label::after {
+      margin-right: $unit;
+    }
+
+    &[bpc-error-msg]::after {
+      right: 0;
+    }
+  }
+
+  &[bpc-label-layout="inline"]>ul>li {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes bpc-form-error-show {
+  0% {
+    opacity: 0;
+    transform: translateY(-$unit);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

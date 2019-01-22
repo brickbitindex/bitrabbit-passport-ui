@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>BitRabbit Passport UI</title>
-  <link rel="stylesheet" href="https://assets.zjzsxhy.com/g/bpc/0.4.3/bpc.min.css">
-  <script src="https://assets.zjzsxhy.com/g/bpc/0.4.3/bpc.min.js"></script>
+  <link rel="stylesheet" href="https://assets.zjzsxhy.com/g/bpc/0.4.10/bpc.min.css">
+  <script src="https://assets.zjzsxhy.com/g/bpc/0.4.10/bpc.min.js"></script>
   <style>
     pre {
       background-color: #f5f5f5;
@@ -37,6 +37,18 @@
 &#x3C;input type=&#x22;text&#x22; class=&#x22;bpc-input&#x22; placeholder=&#x22;Normal Size&#x22;&#x3E;
 &#x3C;input type=&#x22;text&#x22; class=&#x22;bpc-input&#x22; placeholder=&#x22;Small Size&#x22; bpc-size=&#x22;small&#x22;&#x3E;</code></pre>
   
+  <h2>禁止状态：配置项disabled</h2>
+  <div class="row">
+    <input type="text" class="bpc-input" disabled placeholder="Large Size" bpc-size="large">
+    <input type="text" class="bpc-input" disabled placeholder="Normal Size">
+    <input type="text" class="bpc-input" disabled placeholder="Small Size" bpc-size="small">
+  </div>
+  <pre>
+    <code>&#x3C;input type=&#x22;text&#x22; class=&#x22;bpc-input&#x22; disabled placeholder=&#x22;Large Size&#x22; bpc-size=&#x22;large&#x22;&#x3E;
+    &#x3C;input type=&#x22;text&#x22; class=&#x22;bpc-input&#x22; disabled placeholder=&#x22;Normal Size&#x22;&#x3E;
+    &#x3C;input type=&#x22;text&#x22; class=&#x22;bpc-input&#x22; disabled placeholder=&#x22;Small Size&#x22; bpc-size=&#x22;small&#x22;&#x3E;</code>
+  </pre>
+
   <h2>配置</h2>
   <div>
     <table class="bpc-table">
@@ -52,6 +64,11 @@
           <td>bpc-size</td>
           <td>N</td>
           <td>尺寸大小，取值空, large, small</td>
+        </tr>
+        <tr>
+          <td>disabled</td>
+          <td>N</td>
+          <td>禁用输入框</td>
         </tr>
       </tbody>
     </table>

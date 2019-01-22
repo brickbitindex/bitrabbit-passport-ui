@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>BitRabbit Passport UI</title>
-  <link rel="stylesheet" href="https://assets.zjzsxhy.com/g/bpc/0.4.3/bpc.min.css">
-  <script src="https://assets.zjzsxhy.com/g/bpc/0.4.3/bpc.min.js"></script>
+  <link rel="stylesheet" href="https://assets.zjzsxhy.com/g/bpc/0.4.10/bpc.min.css">
+  <script src="https://assets.zjzsxhy.com/g/bpc/0.4.10/bpc.min.js"></script>
   <style>
     pre {
       background-color: #f5f5f5;
@@ -81,6 +81,46 @@
   &#x3C;option value=&#x22;3&#x22; disabled&#x3E;C&#x3C;/option&#x3E;
   &#x3C;option value=&#x22;4&#x22;&#x3E;D&#x3C;/option&#x3E;
 &#x3C;/select&#x3E;</code></pre>
+
+<h2>禁止状态：配置项disabled</h2>
+<div class="row exp4">
+  <select class="bpc-select" disabled bpc-size="large">
+    <option value="1">A</option>
+    <option value="2" selected>B</option>
+    <option value="3" disabled>C</option>
+    <option value="4">D</option>
+  </select>
+  <select class="bpc-select" disabled>
+    <option value="1">A</option>
+    <option value="2" selected>B</option>
+    <option value="3" disabled>C</option>
+    <option value="4">D</option>
+  </select>
+  <select class="bpc-select" disabled bpc-size="small">
+    <option value="1">A</option>
+    <option value="2" selected>B</option>
+    <option value="3" disabled>C</option>
+    <option value="4">D</option>
+  </select>
+</div>
+<pre><code>&#x3C;select class=&#x22;bpc-select&#x22; disabled bpc-size=&#x22;large&#x22;&#x3E;
+  &#x3C;option value=&#x22;1&#x22;&#x3E;A&#x3C;/option&#x3E;
+  &#x3C;option value=&#x22;2&#x22; selected&#x3E;B&#x3C;/option&#x3E;
+  &#x3C;option value=&#x22;3&#x22; disabled&#x3E;C&#x3C;/option&#x3E;
+  &#x3C;option value=&#x22;4&#x22;&#x3E;D&#x3C;/option&#x3E;
+  &#x3C;/select&#x3E;
+  &#x3C;select class=&#x22; disabled bpc-select&#x22;&#x3E;
+  &#x3C;option value=&#x22;1&#x22;&#x3E;A&#x3C;/option&#x3E;
+  &#x3C;option value=&#x22;2&#x22; selected&#x3E;B&#x3C;/option&#x3E;
+  &#x3C;option value=&#x22;3&#x22; disabled&#x3E;C&#x3C;/option&#x3E;
+  &#x3C;option value=&#x22;4&#x22;&#x3E;D&#x3C;/option&#x3E;
+  &#x3C;/select&#x3E;
+  &#x3C;select class=&#x22; disabled bpc-select&#x22; bpc-size=&#x22;small&#x22;&#x3E;
+  &#x3C;option value=&#x22;1&#x22;&#x3E;A&#x3C;/option&#x3E;
+  &#x3C;option value=&#x22;2&#x22; selected&#x3E;B&#x3C;/option&#x3E;
+  &#x3C;option value=&#x22;3&#x22; disabled&#x3E;C&#x3C;/option&#x3E;
+  &#x3C;option value=&#x22;4&#x22;&#x3E;D&#x3C;/option&#x3E;
+  &#x3C;/select&#x3E;</code></pre>
   <h2>配置</h2>
   <div>
     <table class="bpc-table">
@@ -96,6 +136,11 @@
           <td>bpc-size</td>
           <td>N</td>
           <td>尺寸大小，取值空, large, small</td>
+        </tr>
+        <tr>
+          <td>disabled</td>
+          <td>N</td>
+          <td>禁用选择框</td>
         </tr>
       </tbody>
     </table>

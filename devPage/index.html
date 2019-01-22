@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="http://localhost:9090/index.css">
+  <script src="https://assets.bitrabbit.com/g/jquery/3.3.1/jquery.min.js"></script>
   <style>
     .row {
       margin-bottom: 24px;
@@ -165,12 +166,14 @@
 
   <h1>Select</h1>
   <div class="row exp4">
-    <select class="bpc-select">
+    <select class="bpc-select" id="selectExp">
       <option value="1">A</option>
       <option value="2" selected>B</option>
       <option value="3" disabled>C</option>
       <option value="4">D</option>
     </select>
+
+    <div id="selectExpResult"></div>
   </div>
   <div class="row exp4">
     <select class="bpc-select" bpc-size="large">
@@ -239,8 +242,40 @@
     </ul>
   </div>
   <div class="row exp3">
-    <ul class="bpc-form" bpc-has-label>
+    <ul class="bpc-form" bpc-label-layout="horizontal">
+      <li bpc-error-msg="This is an error">
+        <span class="bpc-label" required>Country</span>
+        <select class="bpc-select">
+          <option value="1">China</option>
+          <option value="2">USA</option>
+          <option value="3">Japan</option>
+          <option value="4">France</option>
+        </select>
+      </li>
+      <li bpc-error-msg="This is an error">
+        <span class="bpc-label" required>Username</span>
+        <input type="text" class="bpc-input">
+      </li>
       <li>
+        <span class="bpc-label" required>Password</span>
+        <input type="password" class="bpc-input">
+      </li>
+      <ul>
+        <li>
+          <span class="bpc-checkbox-group">
+            <input type="checkbox" value="1" bpc-text="I agree the user policy">
+          </span>
+        </li>
+        <li>
+          <button class="bpc-btn" bpc-type="primary">Register</button>
+          <button class="bpc-btn">Cancel</button>
+        </li>
+      </ul>
+    </ul>
+  </div>
+  <div class="row exp3">
+    <ul class="bpc-form" bpc-label-layout="vertical">
+      <li bpc-error-msg="This is an error">
         <span class="bpc-label" required>Country</span>
         <select class="bpc-select">
           <option value="1">China</option>
@@ -268,6 +303,27 @@
           <button class="bpc-btn">Cancel</button>
         </li>
       </ul>
+    </ul>
+  </div>
+  <div class="row exp3" style="width: 100%;box-sizing: border-box;">
+    <ul class="bpc-form" bpc-label-layout="inline">
+      <li bpc-error-msg="This is an error">
+        <span class="bpc-label" required>Country</span>
+        <select class="bpc-select">
+          <option value="1">China</option>
+          <option value="2">USA</option>
+          <option value="3">Japan</option>
+          <option value="4">France</option>
+        </select>
+      </li>
+      <li>
+        <span class="bpc-label" required>Username</span>
+        <input type="text" class="bpc-input">
+      </li>
+      <li>
+        <button class="bpc-btn">Clean</button>
+        <button class="bpc-btn" bpc-type="primary">Search</button>
+      </li>
     </ul>
   </div>
 
@@ -408,16 +464,23 @@
       </select>
     </div>
   </div>
-  <script src="http://localhost:9090/index.js"></script>
-  <div class="row exp4">
-    <button class="bpc-btn alert-message">点击我弹窗message框</button>
-  </div>
-  <script>
-    const g1 = document.querySelectorAll('[name="g1"]');
-    g1.change = function () {
-      console.log(this);
-    }
-  </script>
 
+  <h1>Limited Input</h1>
+  <div class="row">
+    <input class="bpc-limited-input" bpc-length="5" id="limitInput" value="222">
+    <input class="bpc-limited-input" bpc-length="5" bpc-size="large">
+    <input class="bpc-limited-input" bpc-length="5" bpc-size="small">
+  </div>
+
+  <script src="http://localhost:9090/index.js"></script>
+
+  <script>
+    $(function() {
+      // var $limitInput = $('#limitInput');
+      // $limitInput.change(function(e) {
+      //   var $s = $(e.target);
+      // });
+    });
+  </script>
 </body>
 </html>

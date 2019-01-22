@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BitRabbit Passport UI</title>
+  <link rel="stylesheet" href="https://assets.zjzsxhy.com/g/bpc/0.4.10/bpc.min.css">
+  <script src="https://assets.zjzsxhy.com/g/bpc/0.4.10/bpc.min.js"></script>
+  <style>
+    pre {
+      background-color: #f5f5f5;
+      border: 1px solid #d9d9d9;
+      padding: 12px;
+      line-height: 1.5;
+    }
+    .bpc-input {
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Message 全局提示</h1>
+  <p>全局展示操作反馈信息。</p>
+  <h3>何时使用</h3>
+  <ul>
+    <li>
+      可提供成功、警告和错误等反馈信息。
+    </li>
+    <li>顶部居中显示并自动消失，是一种不打断用户操作的轻量级提示方式。</li>
+  </ul>
+  <h3>基本使用</h3>
+  <div class="row">
+    <button id="success" class="bpc-btn">Success</button>
+    <button id="error" class="bpc-btn">Error</button>
+    <button id="warning" class="bpc-btn">Warning</button>
+  </div>
+  <script>
+    const BPC = window.BPC;
+    const success = document.getElementById('success');
+    const error = document.getElementById('error');
+    const warning = document.getElementById('warning');
+    success.onclick = function() {
+      BPC.message('success', 'success', 50000);
+    }
+    error.onclick = function() {
+      BPC.message('error', 'error');
+    }
+
+    warning.onclick = function() {
+      BPC.mesasge('warning', 'warning');
+    }
+  </script>
+  <pre>
+    BPC.mesasge('success', '成功提示');
+    BPC.message('error', '错误提示');
+    BPC.message('warning', '警告提示');
+  </pre>
+  <h3>自定义时长</h3>
+  <pre>
+    BPC.message('success', '成功提示5秒', 5000);
+  </pre>
+</body>
+</html>

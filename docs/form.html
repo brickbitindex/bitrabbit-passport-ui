@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>BitRabbit Passport UI</title>
-  <link rel="stylesheet" href="https://assets.zjzsxhy.com/g/bpc/0.4.3/bpc.min.css">
-  <script src="https://assets.zjzsxhy.com/g/bpc/0.4.3/bpc.min.js"></script>
+  <link rel="stylesheet" href="https://assets.zjzsxhy.com/g/bpc/0.4.10/bpc.min.css">
+  <script src="https://assets.zjzsxhy.com/g/bpc/0.4.10/bpc.min.js"></script>
   <style>
     pre {
       background-color: #f5f5f5;
@@ -22,6 +22,7 @@
     }
     .exp3 {
       width: 500px;
+      margin: 0 auto;
     }
     .exp3 button {
       margin-right: 8px;
@@ -89,9 +90,10 @@
 }</code></pre>
   <p>在Form中再次添加ul将给予二级表单的呈现，它的间距将较一级表单更加小一点。</p>
 
-  <h2>带标签的表单</h2>
+  <h2>带标签的表单布局</h2>
+  <p>Form可以通过设置bpc-label-layout来进行带标签的布局，标签的class为bpc-label，拥有一个required的属性，来表示必要的表单项。bpc-label-layout有3种可选的布局方式：horizontal、vertical和inline。可以为每个选项的li加上`bpc-error-msg="错误提示"`来产生错误提示。</p>
   <div class="row exp3">
-    <ul class="bpc-form" bpc-has-label>
+    <ul class="bpc-form" bpc-label-layout="horizontal">
       <li>
         <span class="bpc-label" required>Country</span>
         <select class="bpc-select">
@@ -122,42 +124,154 @@
       </ul>
     </ul>
   </div>
-  <pre><code>&#x3C;ul class=&#x22;bpc-form&#x22; bpc-has-label&#x3E;
-  &#x3C;li&#x3E;
-    &#x3C;span class=&#x22;bpc-label&#x22; required&#x3E;Country&#x3C;/span&#x3E;
-    &#x3C;select class=&#x22;bpc-select&#x22;&#x3E;
-      &#x3C;option value=&#x22;1&#x22;&#x3E;China&#x3C;/option&#x3E;
-      &#x3C;option value=&#x22;2&#x22;&#x3E;USA&#x3C;/option&#x3E;
-      &#x3C;option value=&#x22;3&#x22;&#x3E;Japan&#x3C;/option&#x3E;
-      &#x3C;option value=&#x22;4&#x22;&#x3E;France&#x3C;/option&#x3E;
-    &#x3C;/select&#x3E;
-  &#x3C;/li&#x3E;
-  &#x3C;li&#x3E;
-    &#x3C;span class=&#x22;bpc-label&#x22; required&#x3E;Username&#x3C;/span&#x3E;
-    &#x3C;input type=&#x22;text&#x22; class=&#x22;bpc-input&#x22;&#x3E;
-  &#x3C;/li&#x3E;
-  &#x3C;li&#x3E;
-    &#x3C;span class=&#x22;bpc-label&#x22; required&#x3E;Password&#x3C;/span&#x3E;
-    &#x3C;input type=&#x22;password&#x22; class=&#x22;bpc-input&#x22;&#x3E;
-  &#x3C;/li&#x3E;
-  &#x3C;ul&#x3E;
-    &#x3C;li&#x3E;
-      &#x3C;span class=&#x22;bpc-checkbox-group&#x22;&#x3E;
-        &#x3C;input type=&#x22;checkbox&#x22; value=&#x22;1&#x22; bpc-text=&#x22;I agree the user policy&#x22;&#x3E;
-      &#x3C;/span&#x3E;
-    &#x3C;/li&#x3E;
-    &#x3C;li&#x3E;
-      &#x3C;button class=&#x22;bpc-btn&#x22; bpc-type=&#x22;primary&#x22;&#x3E;Register&#x3C;/button&#x3E;
-      &#x3C;button class=&#x22;bpc-btn&#x22;&#x3E;Cancel&#x3C;/button&#x3E;
-    &#x3C;/li&#x3E;
-  &#x3C;/ul&#x3E;
-&#x3C;/ul&#x3E;</code></pre>
+  <hr>
+  <div class="row exp3">
+    <ul class="bpc-form" bpc-label-layout="vertical">
+      <li>
+        <span class="bpc-label" required>Country</span>
+        <select class="bpc-select">
+          <option value="1">China</option>
+          <option value="2">USA</option>
+          <option value="3">Japan</option>
+          <option value="4">France</option>
+        </select>
+      </li>
+      <li>
+        <span class="bpc-label" required>Username</span>
+        <input type="text" class="bpc-input">
+      </li>
+      <li>
+        <span class="bpc-label" required>Password</span>
+        <input type="password" class="bpc-input">
+      </li>
+      <ul>
+        <li>
+          <span class="bpc-checkbox-group">
+            <input type="checkbox" value="1" bpc-text="I agree the user policy">
+          </span>
+        </li>
+        <li>
+          <button class="bpc-btn" bpc-type="primary">Register</button>
+          <button class="bpc-btn">Cancel</button>
+        </li>
+      </ul>
+    </ul>
+  </div>
+  <hr>
+  <div class="row exp3" style="width: 100%;box-sizing: border-box;">
+    <ul class="bpc-form" bpc-label-layout="inline">
+      <li>
+        <span class="bpc-label" required>Country</span>
+        <select class="bpc-select">
+          <option value="1">China</option>
+          <option value="2">USA</option>
+          <option value="3">Japan</option>
+          <option value="4">France</option>
+        </select>
+      </li>
+      <li>
+        <span class="bpc-label" required>Username</span>
+        <input type="text" class="bpc-input">
+      </li>
+      <li>
+        <button class="bpc-btn">Clean</button>
+        <button class="bpc-btn" bpc-type="primary">Search</button>
+      </li>
+    </ul>
+  </div>
+  <pre><code>&lt;div class=&quot;row exp3&quot;&gt;
+  &lt;ul class=&quot;bpc-form&quot; bpc-label-layout=&quot;horizontal&quot;&gt;
+    &lt;li&gt;
+      &lt;span class=&quot;bpc-label&quot; required&gt;Country&lt;/span&gt;
+      &lt;select class=&quot;bpc-select&quot;&gt;
+        &lt;option value=&quot;1&quot;&gt;China&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;USA&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Japan&lt;/option&gt;
+        &lt;option value=&quot;4&quot;&gt;France&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;span class=&quot;bpc-label&quot; required&gt;Username&lt;/span&gt;
+      &lt;input type=&quot;text&quot; class=&quot;bpc-input&quot;&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;span class=&quot;bpc-label&quot; required&gt;Password&lt;/span&gt;
+      &lt;input type=&quot;password&quot; class=&quot;bpc-input&quot;&gt;
+    &lt;/li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;span class=&quot;bpc-checkbox-group&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; value=&quot;1&quot; bpc-text=&quot;I agree the user policy&quot;&gt;
+        &lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;button class=&quot;bpc-btn&quot; bpc-type=&quot;primary&quot;&gt;Register&lt;/button&gt;
+        &lt;button class=&quot;bpc-btn&quot;&gt;Cancel&lt;/button&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;div class=&quot;row exp3&quot;&gt;
+  &lt;ul class=&quot;bpc-form&quot; bpc-label-layout=&quot;vertical&quot;&gt;
+    &lt;li&gt;
+      &lt;span class=&quot;bpc-label&quot; required&gt;Country&lt;/span&gt;
+      &lt;select class=&quot;bpc-select&quot;&gt;
+        &lt;option value=&quot;1&quot;&gt;China&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;USA&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Japan&lt;/option&gt;
+        &lt;option value=&quot;4&quot;&gt;France&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;span class=&quot;bpc-label&quot; required&gt;Username&lt;/span&gt;
+      &lt;input type=&quot;text&quot; class=&quot;bpc-input&quot;&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;span class=&quot;bpc-label&quot; required&gt;Password&lt;/span&gt;
+      &lt;input type=&quot;password&quot; class=&quot;bpc-input&quot;&gt;
+    &lt;/li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;span class=&quot;bpc-checkbox-group&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; value=&quot;1&quot; bpc-text=&quot;I agree the user policy&quot;&gt;
+        &lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;button class=&quot;bpc-btn&quot; bpc-type=&quot;primary&quot;&gt;Register&lt;/button&gt;
+        &lt;button class=&quot;bpc-btn&quot;&gt;Cancel&lt;/button&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;div class=&quot;row exp3&quot; style=&quot;width: 100%;box-sizing: border-box;&quot;&gt;
+  &lt;ul class=&quot;bpc-form&quot; bpc-label-layout=&quot;inline&quot;&gt;
+    &lt;li&gt;
+      &lt;span class=&quot;bpc-label&quot; required&gt;Country&lt;/span&gt;
+      &lt;select class=&quot;bpc-select&quot;&gt;
+        &lt;option value=&quot;1&quot;&gt;China&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;USA&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Japan&lt;/option&gt;
+        &lt;option value=&quot;4&quot;&gt;France&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;span class=&quot;bpc-label&quot; required&gt;Username&lt;/span&gt;
+      &lt;input type=&quot;text&quot; class=&quot;bpc-input&quot;&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;button class=&quot;bpc-btn&quot;&gt;Clean&lt;/button&gt;
+      &lt;button class=&quot;bpc-btn&quot; bpc-type=&quot;primary&quot;&gt;Search&lt;/button&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
   <pre><code>.exp3 {
   width: 500px;
+  margin: 0 auto;
 }
 .exp3 button {
   margin-right: 8px;
 }</code></pre>
-  <p>使用bpc-has-label属性可以要求Form带标签，标签的class为bpc-label，拥有一个required的属性，来表示必要的表单项。</p>
 </body>
 </html>

@@ -1,0 +1,38 @@
+.bpcr-limited-input {
+  &-wrapper {
+    height: $md-size;
+    display: inline-block;
+  }
+  &-wrapper[bpc-size="large"] {
+    height: $lg-size;
+
+    .bpcr-limited-input-block {
+      width: $lg-size;
+    }
+  }
+
+  &-wrapper[bpc-size="small"] {
+    height: $sm-size;
+
+    .bpcr-limited-input-block {
+      width: $sm-size;
+    }
+  }
+
+  &-block {
+    display: inline-block;
+    width: $md-size;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -1px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:focus {
+      z-index: 3;
+    }
+  }
+}
