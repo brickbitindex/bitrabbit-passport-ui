@@ -6,6 +6,8 @@ import './components/Switch';
 import './components/Select';
 import './components/Pagination';
 import './components/LimitedInput';
+import './components/Calendar';
+import './components/DatePicker';
 
 // plugins
 import './plugins/Tooltip';

@@ -472,14 +472,29 @@
     <input class="bpc-limited-input" bpc-length="5" bpc-size="small">
   </div>
 
+  <h1>Date Picker</h1>
+  <div class="row">
+    <input class="bpc-input bpc-date-picker">
+  </div>
+
+  <h1>Calendar</h1>
+  <div class="row">
+    <div class="bpc-calendar"
+      id="cal"
+      bpc-disable-past-days
+      bpc-month-names="1月,2月,3月,4月,5月,6月,7月,8月,9月,10月,11月,12月"
+      bpc-day-names="一,二,三,四,五,六,日"
+    ></div>
+  </div>
+
   <script src="http://localhost:9090/index.js"></script>
 
   <script>
     $(function() {
-      // var $limitInput = $('#limitInput');
-      // $limitInput.change(function(e) {
-      //   var $s = $(e.target);
-      // });
+      var $cal = $('#cal');
+      $cal.change(function(e) {
+        console.log(e.target.dataset.value);
+      });
     });
   </script>
 </body>
