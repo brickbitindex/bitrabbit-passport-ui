@@ -9,6 +9,7 @@ import './components/LimitedInput';
 
 // plugins
 import './plugins/Tooltip';
+import './plugins/Message';
 
 import './style.scss';
 

@@ -472,6 +472,12 @@
     <input class="bpc-limited-input" bpc-length="5" bpc-size="small">
   </div>
 
+  <h1>Message</h1>
+  <div class="row">
+    <button class="bpc-btn" bpc-type="primary" id="messageSuccess">Success</button>
+    <button class="bpc-btn" bpc-type="primary" id="messageError">Error</button>
+  </div>
+
   <script src="http://localhost:9090/index.js"></script>
 
   <script>
@@ -480,6 +486,13 @@
       // $limitInput.change(function(e) {
       //   var $s = $(e.target);
       // });
+
+      $('#messageSuccess').click(() => {
+        BPC.message.success('success');
+      });
+      $('#messageError').click(() => {
+        BPC.message.error('error');
+      });
     });
   </script>
 </body>
