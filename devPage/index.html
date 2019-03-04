@@ -476,6 +476,7 @@
   <div class="row">
     <button class="bpc-btn" bpc-type="primary" id="messageSuccess">Success</button>
     <button class="bpc-btn" bpc-type="primary" id="messageError">Error</button>
+    <button class="bpc-btn" bpc-type="primary" id="messageWarning">Warning</button>
   </div>
 
   <script src="http://localhost:9090/index.js"></script>
@@ -492,6 +493,9 @@
       });
       $('#messageError').click(() => {
         BPC.message.error('error');
+      });
+      $('#messageWarning').click(() => {
+        BPC.message.warning('warning');
       });
     });
   </script>
